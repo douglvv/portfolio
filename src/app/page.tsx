@@ -46,7 +46,10 @@ export default function Home() {
         </nav>
       </header>
 
-      <section className="w-full h-[80vh] mt-8 sm:mt-4" id="home">
+      <section
+        className="w-full h-[80vh] mt-8 sm:mt-4 flex items-center justify-center"
+        id="home"
+      >
         <div
           className="items-center justify-center container p-4 grid grid-cols-1
            lg:grid-cols-2"
@@ -113,7 +116,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="w-full h-[80vh] mt-8 sm:mt-4" id="sobre">
+      <section className="w-full h-[80vh] mt-4" id="sobre">
         <div className="flex items-center justify-center container p-4">
           <h1 className="text-5xl font-bold tracking-wider text-purple-950">
             Sobre mim
