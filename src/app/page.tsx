@@ -47,12 +47,12 @@ export default function Home() {
       </header>
 
       <section
-        className="w-full h-[80vh] mt-8 sm:mt-4 flex items-center justify-center"
+        className="w-full h-screen flex items-center justify-center -mt-[72px]"
         id="home"
       >
         <div
           className="items-center justify-center container p-4 grid grid-cols-1
-           lg:grid-cols-2"
+           lg:grid-cols-2 mt-8 sm:mt-4"
         >
           <div className="flex items-center justify-center sm:gap-4">
             <div className="flex flex-col gap-6 items-start">
