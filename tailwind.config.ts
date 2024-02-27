@@ -19,18 +19,22 @@ const config = {
     },
     extend: {
       colors: {
+        // "primary": "#5c6cff",
+        // "secondary": "#7681b3",        
+        "custom-white": "#fafafa",
+        "custom-black": "#000414",
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
-        background: "hsl(var(--background))",
-        foreground: "hsl(var(--foreground))",
+        background: "#000414",
+        foreground: "#fafafa",
         primary: {
-          DEFAULT: "hsl(var(--primary))",
-          foreground: "hsl(var(--primary-foreground))",
+          DEFAULT: "#5c6cff",
+          foreground: "#fafafa",
         },
         secondary: {
-          DEFAULT: "hsl(var(--secondary))",
-          foreground: "hsl(var(--secondary-foreground))",
+          DEFAULT: "#dee2ff",
+          foreground: "#000414",
         },
         destructive: {
           DEFAULT: "hsl(var(--destructive))",
@@ -52,6 +56,9 @@ const config = {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
+      },
+      backgroundImage: {
+        'grainy': "url('/grainy.jpeg')",
       },
       borderRadius: {
         lg: "var(--radius)",
