@@ -1,13 +1,13 @@
-import type { Config } from "tailwindcss"
+import type { Config } from "tailwindcss";
 
 const config = {
   darkMode: ["class"],
   content: [
-    './pages/**/*.{ts,tsx}',
-    './components/**/*.{ts,tsx}',
-    './app/**/*.{ts,tsx}',
-    './src/**/*.{ts,tsx}',
-	],
+    "./pages/**/*.{ts,tsx}",
+    "./components/**/*.{ts,tsx}",
+    "./app/**/*.{ts,tsx}",
+    "./src/**/*.{ts,tsx}",
+  ],
   prefix: "",
   theme: {
     container: {
@@ -19,11 +19,9 @@ const config = {
     },
     extend: {
       colors: {
-        // "primary": "#5c6cff",
-        // "secondary": "#7681b3",        
         "custom-white": "#fafafa",
         "custom-black": "#000414",
-        border: "hsl(var(--border))",
+        border: "#000414",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
         background: "#000414",
@@ -58,7 +56,7 @@ const config = {
         },
       },
       backgroundImage: {
-        'grainy': "url('/grainy.jpeg')",
+        grainy: "url('/grainy.jpeg')",
       },
       borderRadius: {
         lg: "var(--radius)",
@@ -66,6 +64,20 @@ const config = {
         sm: "calc(var(--radius) - 4px)",
       },
       keyframes: {
+        blob: {
+          "0%": {
+            transform: "translate(0px, 0px) scale(1)",
+          },
+          "33%": {
+            transform: "translate(15px, 10px) scale(1.1)",
+          },
+          "66%": {
+            transform: "translate(-5px, -15px) scale(0.9)",
+          },
+          "100%": {
+            transform: "translate(0px, 0px) scale(1)",
+          },
+        },
         "accordion-down": {
           from: { height: "0" },
           to: { height: "var(--radix-accordion-content-height)" },
@@ -78,10 +90,11 @@ const config = {
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+        blob: "blob 7s infinite"
       },
     },
   },
   plugins: [require("tailwindcss-animate")],
-} satisfies Config
+} satisfies Config;
 
-export default config
+export default config;
