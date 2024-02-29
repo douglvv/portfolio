@@ -12,8 +12,8 @@ export default function Home() {
           <div>
             <Link
               href="/"
-              className="font-semibold tracking-wider hover:text-secondary 
-              transition duration-300"
+              className="font-semibold tracking-wider hover:tracking-widest 
+              transition duration-300 hover:text-secondary"
             >
               <h1>@douglvv</h1>
             </Link>
@@ -45,7 +45,7 @@ export default function Home() {
               <li className="list-item">
                 <Button variant={"link"} asChild className="text-custom-white">
                   <Link
-                    href="#"
+                    href="#projetos"
                     className="font-semibold tracking-wider hover:text-secondary 
                     transition duration-300"
                   >
@@ -56,7 +56,7 @@ export default function Home() {
               <li className="list-item">
                 <Button variant={"link"} asChild className="text-custom-white">
                   <Link
-                    href="#"
+                    href="#contato"
                     className="font-semibold tracking-wider hover:text-secondary"
                   >
                     Contato
@@ -71,7 +71,7 @@ export default function Home() {
       {/* Hero */}
       <section
         className="w-full relative min-h-screen flex items-center justify-center -mt-[88px]
-        bg-gradient-to-br from-primary/20 from-10% to-50% to-custom-black pt-12"
+        bg-gradient-to-br from-primary/20 from-10% to-50% to-custom-black py-[88px]"
         id="home"
       >
         <div
@@ -166,8 +166,8 @@ export default function Home() {
 
       {/* Sobre */}
       <section
-        className="relative z-10 w-full min-h-fit mt-[72px] pb-[88px] bg-gradient-to-b
-      from-custom-black to-primary/20"
+        className="relative z-10 w-full min-h-fit mt-[88px] pb-[88px] bg-gradient-to-b
+      from-custom-black from-30%% to-primary/20"
       >
         <div
           className="flex flex-col items-center justify-center container gap-2 mb-16"
@@ -184,14 +184,14 @@ export default function Home() {
         </div>
 
         <div
-          className="grid grid-cols-1 lg:grid-cols-2 items-center gap-16 
+          className="grid grid-cols-1 lg:grid-cols-2 items-start gap-16 
           justify-center container p-4 relative z-20"
         >
           <div className="flex flex-col gap-2 items-start justify-start">
             <h3 className="text-lg md:text-xl font-semibold">
               Me conheça melhor:
             </h3>
-            <p className="text-base md:text-lg text-secondary">
+            <p className="text-base md:text-lg text-secondary leading-loose">
               Sou um desenvolvedor web, graduado em Análise e Desenvolvimento de
               Sistemas pelo Instituto Federal de Santa Catarina no ano de 2023.
               <br />
@@ -210,29 +210,145 @@ export default function Home() {
           </div>
           <div className="flex flex-col gap-2 items-start justify-start">
             <h3 className="text-lg md:text-xl font-semibold">Habilidades:</h3>
-            <div className="flex flex-row flex-wrap gap-3">
-              <Button variant={"secondary"}>Javascript</Button>
-              <Button variant={"secondary"}>Typescript</Button>
-              <Button variant={"secondary"}>React</Button>
-              <Button variant={"secondary"}>Node.js</Button>
-              <Button variant={"secondary"}>Next.js</Button>
-              <Button variant={"secondary"}>Tailwind</Button>
-              <Button variant={"secondary"}>Socket.io</Button>
-              <Button variant={"secondary"}>Docker</Button>
-              <Button variant={"secondary"}>Bootsrap</Button>
-              <Button variant={"secondary"}>Git</Button>
+            <div className="flex flex-row flex-grow flex-wrap gap-3">
+              <span
+                className="py-2 px-4 rounded-lg bg-white/20 text-primary-foreground
+                backdrop-blur-lg text-center hover:bg-white/40 cursor-default"
+              >
+                Javascript
+              </span>
+              <span
+                className="py-2 px-4 rounded-lg bg-white/20 text-primary-foreground
+                backdrop-blur-lg text-center hover:bg-white/40 cursor-default"
+              >
+                Typescript
+              </span>
+              <span
+                className="py-2 px-4 rounded-lg bg-white/20 text-primary-foreground
+                backdrop-blur-lg text-center hover:bg-white/40 cursor-default"
+              >
+                Node.js
+              </span>
+              <span
+                className="py-2 px-4 rounded-lg bg-white/20 text-primary-foreground
+                backdrop-blur-lg text-center hover:bg-white/40 cursor-default"
+              >
+                React
+              </span>
+              <span
+                className="py-2 px-4 rounded-lg bg-white/20 text-primary-foreground
+                backdrop-blur-lg text-center hover:bg-white/40 cursor-default"
+              >
+                Node.js
+              </span>
+              <span
+                className="py-2 px-4 rounded-lg bg-white/20 text-primary-foreground
+                backdrop-blur-lg text-center hover:bg-white/40 cursor-default"
+              >
+                Express
+              </span>
+              <span
+                className="py-2 px-4 rounded-lg bg-white/20 text-primary-foreground
+                backdrop-blur-lg text-center hover:bg-white/40 cursor-default"
+              >
+                Socket.io
+              </span>
+              <span
+                className="py-2 px-4 rounded-lg bg-white/20 text-primary-foreground
+                backdrop-blur-lg text-center hover:bg-white/40 cursor-default"
+              >
+                MongoDB
+              </span>
+              <span
+                className="py-2 px-4 rounded-lg bg-white/20 text-primary-foreground
+                backdrop-blur-lg text-center hover:bg-white/40 cursor-default"
+              >
+                MySQL
+              </span>
+              <span
+                className="py-2 px-4 rounded-lg bg-white/20 text-primary-foreground
+                backdrop-blur-lg text-center hover:bg-white/40 cursor-default"
+              >
+                Sequelize
+              </span>
+              <span
+                className="py-2 px-4 rounded-lg bg-white/20 text-primary-foreground
+                backdrop-blur-lg text-center hover:bg-white/40 cursor-default"
+              >
+                Mongoose
+              </span>
+              <span
+                className="py-2 px-4 rounded-lg bg-white/20 text-primary-foreground
+                backdrop-blur-lg text-center hover:bg-white/40 cursor-default"
+              >
+                Docker
+              </span>
+              <span
+                className="py-2 px-4 rounded-lg bg-white/20 text-primary-foreground
+                backdrop-blur-lg text-center hover:bg-white/40 cursor-default"
+              >
+                Git
+              </span>
+              <span
+                className="py-2 px-4 rounded-lg bg-white/20 text-primary-foreground
+                backdrop-blur-lg text-center hover:bg-white/40 cursor-default"
+              >
+                Bootstrap
+              </span>
+              <span
+                className="py-2 px-4 rounded-lg bg-white/20 text-primary-foreground
+                backdrop-blur-lg text-center hover:bg-white/40 cursor-default"
+              >
+                Tailwind
+              </span>
+              <span
+                className="py-2 px-4 rounded-lg bg-white/20 text-primary-foreground
+                backdrop-blur-lg text-center hover:bg-white/40 cursor-default"
+              >
+                Handlebars
+              </span>
+              <span
+                className="py-2 px-4 rounded-lg bg-white/20 text-primary-foreground
+                backdrop-blur-lg text-center hover:bg-white/40 cursor-default"
+              >
+                API
+              </span>
+              <span
+                className="py-2 px-4 rounded-lg bg-white/20 text-primary-foreground
+                backdrop-blur-lg text-center hover:bg-white/40 cursor-default"
+              >
+                JWT
+              </span>
+              <span
+                className="py-2 px-4 rounded-lg bg-white/20 text-primary-foreground
+                backdrop-blur-lg text-center hover:bg-white/40 cursor-default"
+              >
+                Jest
+              </span>
+              <span
+                className="py-2 px-4 rounded-lg bg-white/20 text-primary-foreground
+                backdrop-blur-lg text-center hover:bg-white/40 cursor-default"
+              >
+                Docker
+              </span>
+              <span
+                className="py-2 px-4 rounded-lg bg-white/20 text-primary-foreground
+                backdrop-blur-lg text-center hover:bg-white/40 cursor-default"
+              >
+                React Sring
+              </span>
             </div>
           </div>
         </div>
 
-        {/* Blobs for styling */}
+        {/* Blobs */}
         <div
-          className="absolute z-0 top-12 right-40 w-64 h-64 bg-purple-700/35
+          className="absolute z-0 top-12 right-40 w-64 h-64 bg-purple-700/40
           rounded-full mix-blend-screen filter blur-2xl animate-blob"
           style={{ pointerEvents: "none" }}
         />
         <div
-          className="absolute z-0 top-8 right-24 w-64 h-64 bg-primary/35
+          className="absolute z-0 top-8 right-24 w-64 h-64 bg-primary/40
           rounded-full mix-blend-screen filter blur-2xl animate-blob 
           animation-delay-2000"
           style={{ pointerEvents: "none" }}
@@ -242,7 +358,8 @@ export default function Home() {
       {/* Projetos */}
       <section
         className="min-h-screen w-full bg-gradient-to-b
-      to-custom-black from-40% to-75%0% from-primary/20 py-[88px] p-4"
+      to-custom-black from-30% to-70% from-primary/20 py-[88px] p-4"
+        id="projetos"
       >
         <div
           className="container flex items-center justify-center flex-col gap-2
@@ -359,14 +476,13 @@ export default function Home() {
               </Link>
             </div>
           </div>
-
         </div>
       </section>
 
       {/* Contato */}
       <section
-        className="h-screen w-full bg-gradient-to-b
-      from-custom-black from-30% to-primary/20 py-[88px]"
+        className="h-screen w-full py-[88px] bg-gradient-to-br from-custom-black from-50% to-80% to-primary/20"
+        id="contato"
       >
         <div
           className="container flex items-center justify-center flex-col gap-2
