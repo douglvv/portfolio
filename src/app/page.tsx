@@ -1,4 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
+import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Github, Linkedin, Mail } from "lucide-react";
 import Link from "next/link";
@@ -7,11 +8,12 @@ export default function Home() {
   return (
     <main>
       <header className="top-0 sticky z-50 w-full shadow bg-transparent backdrop-blur-lg">
-        <nav className="flex flex-wrap items-center justify-between p-4 container">
+        <nav className="flex flex-wrap items-center justify-between p-6 container">
           <div>
             <Link
               href="/"
-              className="font-semibold tracking-wider hover:text-secondary"
+              className="font-semibold tracking-wider hover:text-secondary 
+              transition duration-300"
             >
               <h1>@douglvv</h1>
             </Link>
@@ -22,7 +24,8 @@ export default function Home() {
                 <Button variant={"link"} asChild className="text-custom-white">
                   <Link
                     href="/"
-                    className="font-semibold tracking-wider hover:text-secondary"
+                    className="font-semibold tracking-wider hover:text-secondary 
+                    transition duration-300"
                   >
                     Início
                   </Link>
@@ -32,7 +35,8 @@ export default function Home() {
                 <Button variant={"link"} asChild className="text-custom-white">
                   <Link
                     href="#sobre"
-                    className="font-semibold tracking-wider hover:text-secondary"
+                    className="font-semibold tracking-wider hover:text-secondary 
+                    transition duration-300"
                   >
                     Sobre
                   </Link>
@@ -42,7 +46,8 @@ export default function Home() {
                 <Button variant={"link"} asChild className="text-custom-white">
                   <Link
                     href="#"
-                    className="font-semibold tracking-wider hover:text-secondary"
+                    className="font-semibold tracking-wider hover:text-secondary 
+                    transition duration-300"
                   >
                     Projetos
                   </Link>
@@ -65,7 +70,7 @@ export default function Home() {
 
       {/* Hero */}
       <section
-        className="w-full relative h-screen flex items-center justify-center -mt-[72px]
+        className="w-full relative min-h-screen flex items-center justify-center -mt-[88px]
         bg-gradient-to-br from-primary/20 from-10% to-50% to-custom-black pt-12"
         id="home"
       >
@@ -76,10 +81,10 @@ export default function Home() {
           <div className="flex items-center justify-center sm:gap-4">
             <div className="flex flex-col gap-6 items-center lg:items-start lg:text-start text-center ">
               <h1 className="text-4xl md:text-7xl font-extrabold font-sans  text-custom-white shadow">
-                Douglas Vidal
+                Portfolio
                 <br />
                 {/* Douglas Vidal */}
-                <p className="text-primary">Desenvolvedor Web</p>
+                <p className="text-primary">Douglas Vidal</p>
               </h1>
               <h3 className="text-secondary text-md md:text-xl font-sans font-medium ">
                 Eu amet irure cupidatat minim veniam exercitation ipsum elit ad
@@ -161,11 +166,11 @@ export default function Home() {
 
       {/* Sobre */}
       <section
-        className="relative z-10 w-full h-screen mt-[72px] pb-[72px] bg-gradient-to-b
+        className="relative z-10 w-full min-h-fit mt-[72px] pb-[88px] bg-gradient-to-b
       from-custom-black to-primary/20"
       >
         <div
-          className="flex flex-col items-center justify-center container gap-2 mb-4"
+          className="flex flex-col items-center justify-center container gap-2 mb-16"
           id="sobre"
         >
           <h1
@@ -235,9 +240,14 @@ export default function Home() {
       </section>
 
       {/* Projetos */}
-      <section className="h-screen w-full bg-gradient-to-b
-      to-custom-black from-30% from-primary/20 py-[72px]">
-        <div className="container flex items-center justify-center flex-col gap-2 mb-4">
+      <section
+        className="min-h-screen w-full bg-gradient-to-b
+      to-custom-black from-40% to-75%0% from-primary/20 py-[88px] p-4"
+      >
+        <div
+          className="container flex items-center justify-center flex-col gap-2
+        mb-16"
+        >
           <h3
             className="text-2xl md:text-5xl font-extrabold tracking-widest 
               font-sans uppercase bg-clip-text bg-gradient-to-r from-secondary 
@@ -247,12 +257,121 @@ export default function Home() {
           </h3>
           <span className="w-6 h-1 bg-primary rounded"></span>
         </div>
+        <div
+          className="grid grid-cols-1 md:grid-cols-2 items-center justify-center gap-16 container 
+          "
+        >
+          {/* Card */}
+          <div
+            className="flex flex-col gap-2 rounded-lg p-4 bg-transparent/30
+          backdrop-blur-lg shadow"
+          >
+            <div className="flex gap-2">
+              <span className="w-1 h-6 bg-primary rounded" />
+              <h1 className="text-lg md:text-xl font-semibold">Cinepic</h1>
+            </div>
+            <div>
+              <img
+                src="/cinepic.png"
+                alt="Preview do projeto Cinepic"
+                className="rounded-md max-w-full h-auto p-2 mb-2 shadow"
+              />
+              <p className="text-sm md:text-base text-secondary px-2">
+                Uma aplicação web projetada para fornecer aos usuários
+                informações sobre filmes e séries do banco de dados do IMDb.
+                <br />
+                Permite que os usuários pesquisem e acessem informações
+                detalhadas sobre os títulos, além de salva-los nos favoritos de
+                suas contas para serem acessados posteriormente.
+              </p>
+            </div>
+            <div className="flex flex-row gap-1 flex-wrap p-1">
+              <Badge>typescript</Badge>
+              <Badge>next.js</Badge>
+              <Badge>clerk auth</Badge>
+              <Badge>mongodb</Badge>
+              <Badge>tailwind</Badge>
+              <Badge>shadcn</Badge>
+            </div>
+            <div className="flex flex-row gap-3 flex-shrink p-1 mt-3">
+              <Link href={"https://cinepic.vercel.app"} target="_blank">
+                <Button title="Cinepic" variant={"outline"}>
+                  Live demo
+                </Button>
+              </Link>
+
+              <Link
+                href={"https://github.com/douglvv/cinepic3"}
+                target="_blank"
+              >
+                <Button title="Repositório" variant={"outline"}>
+                  <Github />
+                </Button>
+              </Link>
+            </div>
+          </div>
+
+          {/* Card 2 */}
+          <div
+            className="flex flex-col gap-2 rounded-lg p-4 bg-transparent/30 
+          backdrop-blur-lg shadow"
+          >
+            <div className="flex gap-2">
+              <span className="w-1 h-6 bg-primary rounded" />
+              <h1 className="text-lg md:text-xl font-semibold">URLR</h1>
+            </div>
+            <div>
+              <img
+                src="/urlr.png"
+                alt="Preview do projeto URLR"
+                className="rounded-md max-w-full h-auto p-2 mb-2 shadow"
+              />
+              <p className="text-sm md:text-base text-secondary px-2">
+                Interface de usuário inspirada no conceito do Link Tree.
+                <br />
+                A principal funcionalidade é permitir a organização e
+                persistência de links, oferecendo a capacidade de reordená-los
+                por meio de drag and drop.
+                <br />
+                As alterações na ordem dos links são salvas utilizando Redux
+                Persist para armazenamento local.
+              </p>
+            </div>
+            <div className="flex flex-row gap-1 flex-wrap p-1">
+              <Badge>react</Badge>
+              <Badge>redux</Badge>
+              <Badge>redux persist</Badge>
+              <Badge>framer motion</Badge>
+              <Badge>drag n drop</Badge>
+              <Badge>tailwind</Badge>
+            </div>
+            <div className="flex flex-row gap-3 flex-shrink p-1 mt-3">
+              <Link href={"https://urlrr.vercel.app"} target="_blank">
+                <Button title="URLR" variant={"outline"}>
+                  Live demo
+                </Button>
+              </Link>
+
+              <Link href={"https://github.com/douglvv/urlr"} target="_blank">
+                <Button title="Repositório" variant={"outline"}>
+                  <Github />
+                </Button>
+              </Link>
+            </div>
+          </div>
+
+        </div>
       </section>
 
       {/* Contato */}
-      <section className="h-screen w-full bg-gradient-to-b
-      from-custom-black from-30% to-primary/20 py-[72px]">
-        <div className="container flex items-center justify-center flex-col gap-2 mb-4">
+      <section
+        className="h-screen w-full bg-gradient-to-b
+      from-custom-black from-30% to-primary/20 py-[88px]"
+      >
+        <div
+          className="container flex items-center justify-center flex-col gap-2
+        mb-4"
+        >
           <h3
             className="text-2xl md:text-5xl font-extrabold tracking-widest 
               font-sans uppercase bg-clip-text bg-gradient-to-r from-secondary 
