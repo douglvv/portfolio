@@ -16,7 +16,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${poppins.className} scroll-smooth`}>{children}</body>
+      <body className={`${poppins.className} overflow-x-hidden scroll-smooth`}>{children}</body>
     </html>
   );
 }
