@@ -70,8 +70,8 @@ export default function Home() {
 
       {/* Hero */}
       <section
-        className="w-full relative min-h-screen flex items-center justify-center -mt-[88px]
-        bg-gradient-to-br from-primary/20 from-10% to-50% to-custom-black py-[88px]"
+        className="w-full relative min-h-screen flex items-center justify-center -mt-[88px] py-[88px]"
+        // bg-gradient-to-br from-primary/20 from-10% to-50% to-custom-black "
         id="home"
       >
         <div
@@ -80,13 +80,13 @@ export default function Home() {
         >
           <div className="flex items-center justify-center sm:gap-4">
             <div className="flex flex-col gap-6 items-center lg:items-start lg:text-start text-center ">
-              <h1 className="text-4xl md:text-7xl font-extrabold font-sans  text-custom-white shadow">
+              <h1 className="text-4xl md:text-7xl font-extrabold font-sans text-custom-white shadow">
                 Portfolio
                 <br />
                 {/* Douglas Vidal */}
-                <p className="text-primary">Douglas Vidal</p>
+                <p className="text-primary shadow">Douglas Vidal</p>
               </h1>
-              <h3 className="text-secondary text-md md:text-xl font-sans font-medium ">
+              <h3 className="text-secondary text-md md:text-xl font-sans font-medium shadow">
                 Eu amet irure cupidatat minim veniam exercitation ipsum elit ad
                 culpa pariatur.
               </h3>
@@ -140,22 +140,22 @@ export default function Home() {
             <div className="relative">
               {/* Blurry blobs */}
               <div
-                className="absolute top-6 left-20 w-64 h-64 bg-primary 
+                className="absolute top-0 right-72 w-44 h-44 lg:w-96 lg:h-96 bg-primary 
                 rounded-full mix-blend-screen filter blur-2xl opacity-70 animate-blob"
               />
               <div
-                className="absolute top-12 right-24 w-64 h-64 bg-indigo-700
+                className="absolute bottom-12 right-12 w-44 h-44 lg:w-96 lg:h-96 bg-indigo-700
                 rounded-full mix-blend-screen filter blur-2xl opacity-70 animate-blob 
                 animation-delay-2000"
               />
               <div
-                className="absolute bottom-2 right-44 w-64 h-64 bg-purple-900
+                className="absolute -bottom-20 right-40 w-44 h-44 lg:w-96 lg:h-96 bg-purple-900
                 rounded-full mix-blend-screen filter blur-2xl opacity-70 animate-blob 
                 animation-delay-4000"
               />
 
               <img
-                className="relative max-h-[450px] w-auto drop-shadow"
+                className="relative max-h-[450px] w-auto drop-shadow opacity-0"
                 src="hero-img.png"
                 alt="Web developer coding on a laptop"
               />
@@ -166,8 +166,8 @@ export default function Home() {
 
       {/* Sobre */}
       <section
-        className="relative z-10 w-full min-h-fit mt-[88px] pb-[88px] bg-gradient-to-b
-      from-custom-black from-30%% to-primary/20"
+        className="relative z-10 w-full min-h-fit mt-[88px] pb-[88px]"
+        // from-custom-black from-30%% to-primary/20 bg-gradient-to-b"
       >
         <div
           className="flex flex-col items-center justify-center container gap-2 mb-16"
@@ -210,13 +210,8 @@ export default function Home() {
           </div>
           <div className="flex flex-col gap-2 items-start justify-start">
             <h3 className="text-lg md:text-xl font-semibold">Habilidades:</h3>
+            {/* TODO: mudar para gris com flex-shrink */}
             <div className="flex flex-row flex-grow flex-wrap gap-3">
-              <span
-                className="py-2 px-4 rounded-lg bg-white/20 text-primary-foreground
-                backdrop-blur-lg text-center hover:bg-white/40 cursor-default"
-              >
-                Javascript
-              </span>
               <span
                 className="py-2 px-4 rounded-lg bg-white/20 text-primary-foreground
                 backdrop-blur-lg text-center hover:bg-white/40 cursor-default"
@@ -227,13 +222,79 @@ export default function Home() {
                 className="py-2 px-4 rounded-lg bg-white/20 text-primary-foreground
                 backdrop-blur-lg text-center hover:bg-white/40 cursor-default"
               >
-                Node.js
+                React
               </span>
               <span
                 className="py-2 px-4 rounded-lg bg-white/20 text-primary-foreground
                 backdrop-blur-lg text-center hover:bg-white/40 cursor-default"
               >
-                React
+                Redux
+              </span>
+              <span
+                className="py-2 px-4 rounded-lg bg-white/20 text-primary-foreground
+                backdrop-blur-lg text-center hover:bg-white/40 cursor-default"
+              >
+                Next.js
+              </span>              
+              <span
+                className="py-2 px-4 rounded-lg bg-white/20 text-primary-foreground
+                backdrop-blur-lg text-center hover:bg-white/40 cursor-default"
+              >
+                Vite
+              </span>
+              <span
+                className="py-2 px-4 rounded-lg bg-white/20 text-primary-foreground
+                backdrop-blur-lg text-center hover:bg-white/40 cursor-default"
+              >
+                Shadcn
+              </span>
+              <span
+                className="py-2 px-4 rounded-lg bg-white/20 text-primary-foreground
+                backdrop-blur-lg text-center hover:bg-white/40 cursor-default"
+              >
+                Tailwind
+              </span>
+              <span
+                className="py-2 px-4 rounded-lg bg-white/20 text-primary-foreground
+                backdrop-blur-lg text-center hover:bg-white/40 cursor-default"
+              >
+                Bootstrap
+              </span>
+              <span
+                className="py-2 px-4 rounded-lg bg-white/20 text-primary-foreground
+                backdrop-blur-lg text-center hover:bg-white/40 cursor-default"
+              >
+                Styled Components
+              </span>
+              <span
+                className="py-2 px-4 rounded-lg bg-white/20 text-primary-foreground
+                backdrop-blur-lg text-center hover:bg-white/40 cursor-default"
+              >
+                Framer Motion
+              </span>
+              <span
+                className="py-2 px-4 rounded-lg bg-white/20 text-primary-foreground
+                backdrop-blur-lg text-center hover:bg-white/40 cursor-default"
+              >
+                React Sring
+              </span>
+              <span
+                className="py-2 px-4 rounded-lg bg-white/20 text-primary-foreground
+                backdrop-blur-lg text-center hover:bg-white/40 cursor-default"
+              >
+                Socket.io
+              </span>
+              <span
+                className="py-2 px-4 rounded-lg bg-white/20 text-primary-foreground
+                backdrop-blur-lg text-center hover:bg-white/40 cursor-default"
+              >
+                Docker
+              </span>
+              <span
+                className="py-2 px-4 rounded-lg bg-white/20 text-primary-foreground
+                backdrop-blur-lg text-center hover:bg-white/40 cursor-default"
+              >
+                Git
               </span>
               <span
                 className="py-2 px-4 rounded-lg bg-white/20 text-primary-foreground
@@ -246,12 +307,6 @@ export default function Home() {
                 backdrop-blur-lg text-center hover:bg-white/40 cursor-default"
               >
                 Express
-              </span>
-              <span
-                className="py-2 px-4 rounded-lg bg-white/20 text-primary-foreground
-                backdrop-blur-lg text-center hover:bg-white/40 cursor-default"
-              >
-                Socket.io
               </span>
               <span
                 className="py-2 px-4 rounded-lg bg-white/20 text-primary-foreground
@@ -281,30 +336,6 @@ export default function Home() {
                 className="py-2 px-4 rounded-lg bg-white/20 text-primary-foreground
                 backdrop-blur-lg text-center hover:bg-white/40 cursor-default"
               >
-                Docker
-              </span>
-              <span
-                className="py-2 px-4 rounded-lg bg-white/20 text-primary-foreground
-                backdrop-blur-lg text-center hover:bg-white/40 cursor-default"
-              >
-                Git
-              </span>
-              <span
-                className="py-2 px-4 rounded-lg bg-white/20 text-primary-foreground
-                backdrop-blur-lg text-center hover:bg-white/40 cursor-default"
-              >
-                Bootstrap
-              </span>
-              <span
-                className="py-2 px-4 rounded-lg bg-white/20 text-primary-foreground
-                backdrop-blur-lg text-center hover:bg-white/40 cursor-default"
-              >
-                Tailwind
-              </span>
-              <span
-                className="py-2 px-4 rounded-lg bg-white/20 text-primary-foreground
-                backdrop-blur-lg text-center hover:bg-white/40 cursor-default"
-              >
                 Handlebars
               </span>
               <span
@@ -324,18 +355,6 @@ export default function Home() {
                 backdrop-blur-lg text-center hover:bg-white/40 cursor-default"
               >
                 Jest
-              </span>
-              <span
-                className="py-2 px-4 rounded-lg bg-white/20 text-primary-foreground
-                backdrop-blur-lg text-center hover:bg-white/40 cursor-default"
-              >
-                Docker
-              </span>
-              <span
-                className="py-2 px-4 rounded-lg bg-white/20 text-primary-foreground
-                backdrop-blur-lg text-center hover:bg-white/40 cursor-default"
-              >
-                React Sring
               </span>
             </div>
           </div>
@@ -357,13 +376,13 @@ export default function Home() {
 
       {/* Projetos */}
       <section
-        className="min-h-screen w-full bg-gradient-to-b
-      to-custom-black from-30% to-70% from-primary/20 py-[88px] p-4"
+        className="relative z-10 min-h-screen w-full py-[88px] p-4"
+        // to-custom-black from-30% to-70% from-primary/20 bg-gradient-to-b"
         id="projetos"
       >
         <div
           className="container flex items-center justify-center flex-col gap-2
-        mb-16"
+          mb-16"
         >
           <h3
             className="text-2xl md:text-5xl font-extrabold tracking-widest 
@@ -375,13 +394,13 @@ export default function Home() {
           <span className="w-6 h-1 bg-primary rounded"></span>
         </div>
         <div
-          className="grid grid-cols-1 md:grid-cols-2 items-center justify-center gap-16 container 
-          "
+          className="grid grid-cols-1 md:grid-cols-2 items-center justify-center
+          gap-16 container"
         >
           {/* Card */}
           <div
             className="flex flex-col gap-2 rounded-lg p-4 bg-transparent/30
-          backdrop-blur-lg shadow"
+          backdrop-blur-3xl shadow"
           >
             <div className="flex gap-2">
               <span className="w-1 h-6 bg-primary rounded" />
@@ -431,7 +450,7 @@ export default function Home() {
           {/* Card 2 */}
           <div
             className="flex flex-col gap-2 rounded-lg p-4 bg-transparent/30 
-          backdrop-blur-lg shadow"
+          backdrop-blur-3xl shadow"
           >
             <div className="flex gap-2">
               <span className="w-1 h-6 bg-primary rounded" />
@@ -476,12 +495,25 @@ export default function Home() {
               </Link>
             </div>
           </div>
+
+          {/* Blobs */}
+          <div
+            className="absolute -z-50 top-[60%] -left-24 w-64 h-80 bg-purple-700/30
+          rounded-full mix-blend-screen filter blur-2xl animate-blob"
+            style={{ pointerEvents: "none" }}
+          />
+          <div
+            className="absolute -z-50 top-2/4 -left-40 w-64 h-80 bg-primary/30
+          rounded-full mix-blend-screen filter blur-2xl animate-blob 
+          animation-delay-2000"
+            style={{ pointerEvents: "none" }}
+          />
         </div>
       </section>
 
       {/* Contato */}
       <section
-        className="h-screen w-full py-[88px] bg-gradient-to-br from-custom-black from-50% to-80% to-primary/20"
+        className="h-screen w-full py-[88px] bg-gradient-to-b from-custom-black from-40% to-80% to-primary/20"
         id="contato"
       >
         <div
