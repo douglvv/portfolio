@@ -70,25 +70,30 @@ export default function Home() {
 
       {/* Hero */}
       <section
-        className="w-full relative min-h-screen flex items-center justify-center -mt-[88px] py-[88px]"
-        // bg-gradient-to-br from-primary/20 from-10% to-50% to-custom-black "
+        className="w-full relative min-h-screen flex items-center justify-center -mt-[88px] py-2 lg:py-[88px]
+        bg-gradient-to-br from-primary/20 from-10% to-50% to-custom-black overflow-x-hidden"
         id="home"
       >
-        <div
-          className="items-center justify-center container p-4 grid grid-cols-1
-           lg:grid-cols-2 mt-8 sm:mt-4"
-        >
+        <div className="flex items-center justify-center container p-4 mt-8 sm:mt-4 relative">
           <div className="flex items-center justify-center sm:gap-4">
-            <div className="flex flex-col gap-6 items-center lg:items-start lg:text-start text-center ">
-              <h1 className="text-4xl md:text-7xl font-extrabold font-sans text-custom-white shadow">
-                Portfolio
+            <div
+              className="flex flex-col gap-6 items-center text-center 
+              sm:max-w-sm md:max-w-lg lg:max-w-fit"
+            >
+              <h1
+                className="text-4xl md:text-6xl lg:text-8xl font-extrabold 
+                font-sans text-custom-white shadow tracking-wider"
+              >
+                Olá, eu sou
                 <br />
-                {/* Douglas Vidal */}
                 <p className="text-primary shadow">Douglas Vidal</p>
               </h1>
-              <h3 className="text-secondary text-md md:text-xl font-sans font-medium shadow">
-                Eu amet irure cupidatat minim veniam exercitation ipsum elit ad
-                culpa pariatur.
+              <h3
+                className="text-secondary text-md md:text-lg lg:text-xl 
+                font-sans font-medium shadow"
+              >
+                Amet ullamco nisi exercitation ex esse sint quis dolore nisi
+                cupidatat occaecat.
               </h3>
 
               <div className="flex flex-row gap-4">
@@ -128,39 +133,41 @@ export default function Home() {
               </div>
 
               <Button
-                className="uppercase text-custom-white font-bold"
-                size={"lg"}
+                className="uppercase text-custom-white font-bold h-auto 
+                sm:py-4 sm:px-28 lg:py-4 lg:px-28"
+                // size={"lg"}
                 variant={"outline"}
               >
                 Download CV
               </Button>
             </div>
           </div>
-          <div className="flex items-center justify-center mx-8 mt-16 md:mt-0">
-            <div className="relative">
-              {/* Blurry blobs */}
-              <div
-                className="absolute top-0 right-72 w-44 h-44 lg:w-96 lg:h-96 bg-primary 
-                rounded-full mix-blend-screen filter blur-2xl opacity-70 animate-blob"
-              />
-              <div
-                className="absolute bottom-12 right-12 w-44 h-44 lg:w-96 lg:h-96 bg-indigo-700
-                rounded-full mix-blend-screen filter blur-2xl opacity-70 animate-blob 
-                animation-delay-2000"
-              />
-              <div
-                className="absolute -bottom-20 right-40 w-44 h-44 lg:w-96 lg:h-96 bg-purple-900
-                rounded-full mix-blend-screen filter blur-2xl opacity-70 animate-blob 
-                animation-delay-4000"
-              />
-
-              <img
-                className="relative max-h-[450px] w-auto drop-shadow opacity-0"
-                src="hero-img.png"
-                alt="Web developer coding on a laptop"
-              />
-            </div>
-          </div>
+          
+          {/* Blurry blobs */}
+          <div
+            className="absolute w-64 h-64 lg:w-72 lg:h-72 rounded-full
+            top-1/3 left-10 lg:-top-28 lg:-left-44 bg-purple-700/30
+            mix-blend-screen filter blur-3xl animate-blob"
+            style={{ pointerEvents: "none" }}
+          />
+          <div
+            className="absolute w-64 h-64 lg:w-72 lg:h-72 rounded-full
+            top-[30%] -left-4 lg:-top-8 lg:-left-56  bg-primary/30
+            mix-blend-screen filter blur-3xl animate-blob animation-delay-2000"
+            style={{ pointerEvents: "none" }}
+          />
+          <div
+            className="absolute w-64 h-64 lg:w-72 lg:h-72 rounded-full
+            top-1/3 right-10 lg:-top-28 lg:-right-44 bg-purple-700/30
+            mix-blend-screen filter blur-3xl animate-blob"
+            style={{ pointerEvents: "none" }}
+          />
+          <div
+            className="absolute w-64 h-64 lg:w-72 lg:h-72 rounded-full
+            top-[30%] -right-4 lg:-top-8 lg:-right-56  bg-primary/30
+            mix-blend-screen filter blur-3xl animate-blob animation-delay-2000"
+            style={{ pointerEvents: "none" }}
+          />
         </div>
       </section>
 
@@ -235,7 +242,7 @@ export default function Home() {
                 backdrop-blur-lg text-center hover:bg-white/40 cursor-default"
               >
                 Next.js
-              </span>              
+              </span>
               <span
                 className="py-2 px-4 rounded-lg bg-white/20 text-primary-foreground
                 backdrop-blur-lg text-center hover:bg-white/40 cursor-default"
