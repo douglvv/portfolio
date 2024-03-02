@@ -6,8 +6,8 @@ import Link from "next/link";
 
 export default function Home() {
   return (
-    <main>
-      <header className="top-0 sticky z-50 w-full shadow bg-transparent backdrop-blur-lg overflow-x-hidden">
+    <main className="overflow-x-hidden">
+      <header className="top-0 sticky z-50 w-full shadow bg-transparent backdrop-blur-lg">
         <nav className="flex flex-wrap items-center justify-between p-6 container text-lg">
           <div>
             <Link
@@ -374,14 +374,16 @@ export default function Home() {
 
         {/* Blobs */}
         <div
-          className="absolute z-0 top-12 right-40 w-64 h-64 bg-purple-700/40
-          rounded-full mix-blend-screen filter blur-2xl animate-blob"
+          className="absolute z-0 lg:w-72 lg:h-72 w-64 h-64 rounded-full
+           mix-blend-screen filter blur-2xl animate-blob bg-purple-700/40
+           lg:-top-32 lg:right-36 -top-24 -right-20"
           style={{ pointerEvents: "none" }}
         />
         <div
-          className="absolute z-0 top-8 right-24 w-64 h-64 bg-primary/40
-          rounded-full mix-blend-screen filter blur-2xl animate-blob 
-          animation-delay-2000"
+          className="absolute z-0 lg:w-72 lg:h-72 w-64 h-64 rounded-full
+          mix-blend-screen filter blur-2xl animate-blob bg-primary/40 
+          animation-delay-2000 lg:-top-16 lg:right-16 -top-6 -right-32"
+          
           style={{ pointerEvents: "none" }}
         />
       </section>
