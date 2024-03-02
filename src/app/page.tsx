@@ -87,35 +87,33 @@ export default function Home() {
       {/* Hero */}
       <section
         className="w-full relative min-h-screen flex items-start md:items-center justify-center -mt-[88px] py-[88px]
-        bg-gradient-to-bl from-primary/20 from-10% to-50% to-custom-black overflow-x-hidden"
+        bg-gradient-to-bl from-primary/20 from-10% to-50% to-custom-black overflow-x-hidden z-10"
         id="home"
       >
         <div className="flex items-center justify-center container p-4 mt-8 sm:mt-4 relative">
           <div className="flex items-center justify-center sm:gap-4">
-            <div
-              className="flex flex-col items-center text-center 
-              sm:max-w-sm md:max-w-lg lg:max-w-fit"
-            >
+            <div className="flex flex-col items-center text-center">
               <div className="mb-8">
                 <h1
                   className="text-4xl md:text-6xl lg:text-8xl font-extrabold 
-                font-sans text-custom-white shadow tracking-wider mb-4"
+                  font-sans text-custom-white shadow -tracking-wider mb-4"
+                  style={{ lineHeight: "1.2" }}
                 >
                   Salve, eu sou
-                  <p className="text-white/0 bg-clip-text bg-gradient-to-r from-primary via-purple-800 to-primary shadow">
+                  <p className="text-white/0 bg-clip-text bg-gradient-to-r from-primary via-indigo-400 to-primary shadow">
                     Douglas Vidal
                   </p>
                 </h1>
                 <h3
                   className="text-secondary text-lg md:text-xl lg:text-2xl 
-                font-sans font-medium shadow"
+                font-sans font-medium shadow max-w-[300px] md:max-w-[450px] lg:max-w-[600px] mx-auto"
                 >
                   Desenvolvedor web buscando aprender e aprimorar minhas
                   habilidades.
                 </h3>
               </div>
 
-              <div className="flex flex-row gap-4 mb-4">
+              <div className="flex flex-row gap-4 mb-4 items-center justify-center">
                 <Link href={"https://www.github.com/douglvv"} target="_blank">
                   <Button
                     size={"icon"}
@@ -152,9 +150,8 @@ export default function Home() {
               </div>
 
               <Button
-                className="uppercase size text-custom-white font-bold h-auto 
-                sm:py-4 sm:px-28 lg:py-4 lg:px-28"
-                // size={"lg"}
+                className="uppercase text-custom-white font-bold"
+                size={"xl"}
                 variant={"outline"}
               >
                 Download CV
@@ -164,31 +161,18 @@ export default function Home() {
 
           {/* Blobs */}
           <div
-            className="absolute w-64 h-64 lg:w-72 lg:h-72 rounded-full
-            top-1/3 left-10 lg:-top-28 lg:-left-44 bg-purple-700/40
-            mix-blend-screen filter blur-3xl md:blur-2xl animate-blob"
+            className="absolute z-0 w-64 h-64 lg:w-72 lg:h-72 rounded-full
+            top-1/3 -left-14 lg:-top-28 lg:-left-44 bg-purple-700/40
+            mix-blend-screen filter blur-2xl md:blur-2xl animate-blob"
             style={{ pointerEvents: "none" }}
           />
           <div
-            className="absolute w-64 h-64 lg:w-72 lg:h-72 rounded-full
-            top-[30%] -left-4 lg:-top-8 lg:-left-56  bg-primary/40
-            mix-blend-screen filter blur-3xl md:blur-2xl animate-blob
+            className="absolute z-0 w-64 h-64 lg:w-72 lg:h-72 rounded-full
+            top-[60%] -left-20 lg:-top-8 lg:-left-56  bg-primary/40
+            mix-blend-screen filter blur-2xl md:blur-2xl animate-blob
             animation-delay-2000"
             style={{ pointerEvents: "none" }}
           />
-          {/* <div
-            className="absolute w-64 h-64 lg:w-72 lg:h-72 rounded-full
-            top-1/3 right-10 lg:-top-28 lg:-right-44 bg-purple-700/40
-            mix-blend-screen filter blur-3xl md:blur-2xl animate-blob"
-            style={{ pointerEvents: "none" }}
-          />
-          <div
-            className="absolute w-64 h-64 lg:w-72 lg:h-72 rounded-full
-            top-[30%] -right-4 lg:-top-8 lg:-right-56  bg-primary/40
-            mix-blend-screen filter blur-3xl md:blur-2xl animate-blob 
-            animation-delay-2000"
-            style={{ pointerEvents: "none" }}
-          /> */}
         </div>
       </section>
 
@@ -216,10 +200,10 @@ export default function Home() {
           justify-center container p-4 relative z-20"
         >
           <div className="flex flex-col gap-2 items-start justify-start">
-            <h3 className="text-lg md:text-xl font-semibold">
+            <h3 className="text-base md:text-lg font-semibold">
               Me conheça melhor:
             </h3>
-            <p className="text-base md:text-lg text-secondary leading-loose">
+            <p className="text-base md:text-lg text-secondary">
               Sou um desenvolvedor web, graduado em Análise e Desenvolvimento de
               Sistemas pelo Instituto Federal de Santa Catarina no ano de 2023.
               <br />
@@ -229,15 +213,15 @@ export default function Home() {
               Possuo disponibilidade também para trabalhos freelance.
               <br />
               Caso tenha interesse sinta-se à vontade para
-              <a href="#contato" className="text-primary">
-                {" "}
+              {" "}
+              <a href="#contato" className="text-blue-500 underline underline-offset-4">
                 entrar em contato
               </a>
               .
             </p>
           </div>
           <div className="flex flex-col gap-2 items-start justify-start">
-            <h3 className="text-lg md:text-xl font-semibold">Habilidades:</h3>
+            <h3 className="text-base md:text-lg font-semibold">Habilidades:</h3>
             {/* TODO: mudar para gris com flex-shrink */}
             <div className="flex flex-row flex-grow flex-wrap gap-3">
               <span
