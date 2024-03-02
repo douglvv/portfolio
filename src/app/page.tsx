@@ -7,8 +7,8 @@ import Link from "next/link";
 export default function Home() {
   return (
     <main>
-      <header className="top-0 sticky z-50 w-full shadow bg-transparent backdrop-blur-lg">
-        <nav className="flex flex-wrap items-center justify-between p-6 container">
+      <header className="top-0 sticky z-50 w-full shadow bg-transparent backdrop-blur-lg overflow-x-hidden">
+        <nav className="flex flex-wrap items-center justify-between p-6 container text-lg">
           <div>
             <Link
               href="/"
@@ -21,7 +21,11 @@ export default function Home() {
           <div>
             <ul className="list-none flex flex-row gap-2">
               <li className="list-item">
-                <Button variant={"link"} asChild className="text-custom-white">
+                <Button
+                  variant={"link"}
+                  asChild
+                  className="text-custom-white text-lg"
+                >
                   <Link
                     href="/"
                     className="font-semibold tracking-wider hover:text-secondary 
@@ -32,7 +36,11 @@ export default function Home() {
                 </Button>
               </li>
               <li className="list-item">
-                <Button variant={"link"} asChild className="text-custom-white">
+                <Button
+                  variant={"link"}
+                  asChild
+                  className="text-custom-white text-lg"
+                >
                   <Link
                     href="#sobre"
                     className="font-semibold tracking-wider hover:text-secondary 
@@ -43,7 +51,11 @@ export default function Home() {
                 </Button>
               </li>
               <li className="list-item">
-                <Button variant={"link"} asChild className="text-custom-white">
+                <Button
+                  variant={"link"}
+                  asChild
+                  className="text-custom-white text-lg"
+                >
                   <Link
                     href="#projetos"
                     className="font-semibold tracking-wider hover:text-secondary 
@@ -54,7 +66,11 @@ export default function Home() {
                 </Button>
               </li>
               <li className="list-item">
-                <Button variant={"link"} asChild className="text-custom-white">
+                <Button
+                  variant={"link"}
+                  asChild
+                  className="text-custom-white text-lg"
+                >
                   <Link
                     href="#contato"
                     className="font-semibold tracking-wider hover:text-secondary"
@@ -70,33 +86,36 @@ export default function Home() {
 
       {/* Hero */}
       <section
-        className="w-full relative min-h-screen flex items-center justify-center -mt-[88px] py-2 lg:py-[88px]
-        bg-gradient-to-br from-primary/20 from-10% to-50% to-custom-black overflow-x-hidden"
+        className="w-full relative min-h-screen flex items-start md:items-center justify-center -mt-[88px] py-[88px]
+        bg-gradient-to-bl from-primary/20 from-10% to-50% to-custom-black overflow-x-hidden"
         id="home"
       >
         <div className="flex items-center justify-center container p-4 mt-8 sm:mt-4 relative">
           <div className="flex items-center justify-center sm:gap-4">
             <div
-              className="flex flex-col gap-6 items-center text-center 
+              className="flex flex-col items-center text-center 
               sm:max-w-sm md:max-w-lg lg:max-w-fit"
             >
-              <h1
-                className="text-4xl md:text-6xl lg:text-8xl font-extrabold 
-                font-sans text-custom-white shadow tracking-wider"
-              >
-                Olá, eu sou
-                <br />
-                <p className="text-primary shadow">Douglas Vidal</p>
-              </h1>
-              <h3
-                className="text-secondary text-md md:text-lg lg:text-xl 
+              <div className="mb-8">
+                <h1
+                  className="text-4xl md:text-6xl lg:text-8xl font-extrabold 
+                font-sans text-custom-white shadow tracking-wider mb-4"
+                >
+                  Salve, eu sou
+                  <p className="text-white/0 bg-clip-text bg-gradient-to-r from-primary via-purple-800 to-primary shadow">
+                    Douglas Vidal
+                  </p>
+                </h1>
+                <h3
+                  className="text-secondary text-lg md:text-xl lg:text-2xl 
                 font-sans font-medium shadow"
-              >
-                Amet ullamco nisi exercitation ex esse sint quis dolore nisi
-                cupidatat occaecat.
-              </h3>
+                >
+                  Desenvolvedor web buscando aprender e aprimorar minhas
+                  habilidades.
+                </h3>
+              </div>
 
-              <div className="flex flex-row gap-4">
+              <div className="flex flex-row gap-4 mb-4">
                 <Link href={"https://www.github.com/douglvv"} target="_blank">
                   <Button
                     size={"icon"}
@@ -133,7 +152,7 @@ export default function Home() {
               </div>
 
               <Button
-                className="uppercase text-custom-white font-bold h-auto 
+                className="uppercase size text-custom-white font-bold h-auto 
                 sm:py-4 sm:px-28 lg:py-4 lg:px-28"
                 // size={"lg"}
                 variant={"outline"}
@@ -142,32 +161,34 @@ export default function Home() {
               </Button>
             </div>
           </div>
-          
-          {/* Blurry blobs */}
+
+          {/* Blobs */}
           <div
             className="absolute w-64 h-64 lg:w-72 lg:h-72 rounded-full
-            top-1/3 left-10 lg:-top-28 lg:-left-44 bg-purple-700/30
-            mix-blend-screen filter blur-3xl animate-blob"
+            top-1/3 left-10 lg:-top-28 lg:-left-44 bg-purple-700/40
+            mix-blend-screen filter blur-3xl md:blur-2xl animate-blob"
             style={{ pointerEvents: "none" }}
           />
           <div
             className="absolute w-64 h-64 lg:w-72 lg:h-72 rounded-full
-            top-[30%] -left-4 lg:-top-8 lg:-left-56  bg-primary/30
-            mix-blend-screen filter blur-3xl animate-blob animation-delay-2000"
+            top-[30%] -left-4 lg:-top-8 lg:-left-56  bg-primary/40
+            mix-blend-screen filter blur-3xl md:blur-2xl animate-blob
+            animation-delay-2000"
+            style={{ pointerEvents: "none" }}
+          />
+          {/* <div
+            className="absolute w-64 h-64 lg:w-72 lg:h-72 rounded-full
+            top-1/3 right-10 lg:-top-28 lg:-right-44 bg-purple-700/40
+            mix-blend-screen filter blur-3xl md:blur-2xl animate-blob"
             style={{ pointerEvents: "none" }}
           />
           <div
             className="absolute w-64 h-64 lg:w-72 lg:h-72 rounded-full
-            top-1/3 right-10 lg:-top-28 lg:-right-44 bg-purple-700/30
-            mix-blend-screen filter blur-3xl animate-blob"
+            top-[30%] -right-4 lg:-top-8 lg:-right-56  bg-primary/40
+            mix-blend-screen filter blur-3xl md:blur-2xl animate-blob 
+            animation-delay-2000"
             style={{ pointerEvents: "none" }}
-          />
-          <div
-            className="absolute w-64 h-64 lg:w-72 lg:h-72 rounded-full
-            top-[30%] -right-4 lg:-top-8 lg:-right-56  bg-primary/30
-            mix-blend-screen filter blur-3xl animate-blob animation-delay-2000"
-            style={{ pointerEvents: "none" }}
-          />
+          /> */}
         </div>
       </section>
 
@@ -407,7 +428,7 @@ export default function Home() {
           {/* Card */}
           <div
             className="flex flex-col gap-2 rounded-lg p-4 bg-transparent/30
-          backdrop-blur-3xl shadow"
+            backdrop-blur-3xl shadow"
           >
             <div className="flex gap-2">
               <span className="w-1 h-6 bg-primary rounded" />
@@ -520,12 +541,14 @@ export default function Home() {
 
       {/* Contato */}
       <section
-        className="h-screen w-full py-[88px] bg-gradient-to-b from-custom-black from-40% to-80% to-primary/20"
+        className="h-screen w-full py-[88px]"
+        //  bg-gradient-to-b from-custom-black
+        // from-40% to-80% to-primary/20"
         id="contato"
       >
         <div
           className="container flex items-center justify-center flex-col gap-2
-        mb-4"
+          mb-16"
         >
           <h3
             className="text-2xl md:text-5xl font-extrabold tracking-widest 
@@ -535,6 +558,57 @@ export default function Home() {
             Contato
           </h3>
           <span className="w-6 h-1 bg-primary rounded"></span>
+        </div>
+
+        <div className="container flex flex-col items-center justify-center">
+          <h1>
+            Sinta-se à vontade para preencher o formulário, assim que possível
+            irei retornar sua mensagem.
+          </h1>
+          <form className="mt-4">
+            <div className="mb-4">
+              <label htmlFor="name" className="block text-sm font-medium">
+                Nome
+              </label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                className="text-custom-black mt-1 px-4 py-2 w-full border rounded-md focus:outline-none focus:ring focus:border-blue-300"
+                placeholder="Digite seu nome"
+                required
+              />
+            </div>
+            <div className="mb-4">
+              <label htmlFor="email" className="block text-sm font-medium">
+                Email
+              </label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                className="text-custom-black mt-1 px-4 py-2 w-full border rounded-md focus:outline-none focus:ring focus:border-blue-300"
+                placeholder="Digite seu email"
+                required
+              />
+            </div>
+            <div className="mb-4">
+              <label htmlFor="message" className="block text-sm font-medium">
+                Mensagem
+              </label>
+              <textarea
+                id="message"
+                name="message"
+                rows={4}
+                className="text-custom-black mt-1 px-4 py-2 w-full border rounded-md focus:outline-none focus:ring focus:border-blue-300"
+                placeholder="Digite sua mensagem"
+                required
+              />
+            </div>
+            <Button size={"lg"} type="submit">
+              Enviar
+            </Button>
+          </form>
         </div>
       </section>
     </main>
