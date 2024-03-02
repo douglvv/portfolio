@@ -7,7 +7,7 @@ import Link from "next/link";
 export default function Home() {
   return (
     <main className="overflow-x-hidden">
-      <header className="top-0 sticky z-50 w-full shadow bg-transparent backdrop-blur-lg">
+      <header className="top-0 fixed z-50 w-full shadow bg-transparent backdrop-blur-lg">
         <nav className="flex flex-wrap items-center justify-between p-6 container text-lg">
           <div>
             <Link
@@ -163,13 +163,13 @@ export default function Home() {
           <div
             className="absolute z-0 w-64 h-64 lg:w-72 lg:h-72 rounded-full
             top-1/3 -left-14 lg:-top-28 lg:-left-44 bg-purple-700/40
-            mix-blend-screen filter blur-2xl md:blur-2xl animate-blob"
+            mix-blend-screen filter blur-3xl md:blur-3xl animate-blob"
             style={{ pointerEvents: "none" }}
           />
           <div
             className="absolute z-0 w-64 h-64 lg:w-72 lg:h-72 rounded-full
             top-[60%] -left-20 lg:-top-8 lg:-left-56  bg-primary/40
-            mix-blend-screen filter blur-2xl md:blur-2xl animate-blob
+            mix-blend-screen filter blur-3xl md:blur-3xl animate-blob
             animation-delay-2000"
             style={{ pointerEvents: "none" }}
           />
@@ -212,9 +212,11 @@ export default function Home() {
               <br />
               Possuo disponibilidade também para trabalhos freelance.
               <br />
-              Caso tenha interesse sinta-se à vontade para
-              {" "}
-              <a href="#contato" className="text-blue-500 underline underline-offset-4">
+              Caso tenha interesse sinta-se à vontade para{" "}
+              <a
+                href="#contato"
+                className="text-blue-500 underline underline-offset-4"
+              >
                 entrar em contato
               </a>
               .
@@ -375,15 +377,14 @@ export default function Home() {
         {/* Blobs */}
         <div
           className="absolute z-0 lg:w-72 lg:h-72 w-64 h-64 rounded-full
-           mix-blend-screen filter blur-2xl animate-blob bg-purple-700/40
+           mix-blend-screen filter blur-3xl animate-blob bg-purple-700/40
            lg:-top-32 lg:right-36 -top-24 -right-20"
           style={{ pointerEvents: "none" }}
         />
         <div
           className="absolute z-0 lg:w-72 lg:h-72 w-64 h-64 rounded-full
-          mix-blend-screen filter blur-2xl animate-blob bg-primary/40 
+          mix-blend-screen filter blur-3xl animate-blob bg-primary/40 
           animation-delay-2000 lg:-top-16 lg:right-16 -top-6 -right-32"
-          
           style={{ pointerEvents: "none" }}
         />
       </section>
@@ -413,8 +414,8 @@ export default function Home() {
         >
           {/* Card */}
           <div
-            className="flex flex-col gap-2 rounded-lg p-4 bg-transparent/30
-            backdrop-blur-3xl shadow"
+            className="flex flex-col gap-2 rounded-lg p-4 shadow bg-gradient-to-br 
+            from-transparent via-primary/20 to-transparent backdrop-blur-3xl"
           >
             <div className="flex gap-2">
               <span className="w-1 h-6 bg-primary rounded" />
@@ -445,7 +446,11 @@ export default function Home() {
             </div>
             <div className="flex flex-row gap-3 flex-shrink p-1 mt-3">
               <Link href={"https://cinepic.vercel.app"} target="_blank">
-                <Button title="Cinepic" variant={"outline"}>
+                <Button
+                  title="Cinepic"
+                  variant={"outline"}
+                  className="bg-custom-black/40"
+                >
                   Live demo
                 </Button>
               </Link>
@@ -454,7 +459,11 @@ export default function Home() {
                 href={"https://github.com/douglvv/cinepic3"}
                 target="_blank"
               >
-                <Button title="Repositório" variant={"outline"}>
+                <Button
+                  title="Repositório"
+                  variant={"outline"}
+                  className="bg-custom-black/40"
+                >
                   <Github />
                 </Button>
               </Link>
@@ -463,8 +472,8 @@ export default function Home() {
 
           {/* Card 2 */}
           <div
-            className="flex flex-col gap-2 rounded-lg p-4 bg-transparent/30 
-          backdrop-blur-3xl shadow"
+            className="flex flex-col gap-2 rounded-lg p-4 shadow bg-gradient-to-br 
+            from-transparent via-primary/20 to-transparent backdrop-blur-3xl"
           >
             <div className="flex gap-2">
               <span className="w-1 h-6 bg-primary rounded" />
@@ -497,32 +506,41 @@ export default function Home() {
             </div>
             <div className="flex flex-row gap-3 flex-shrink p-1 mt-3">
               <Link href={"https://urlrr.vercel.app"} target="_blank">
-                <Button title="URLR" variant={"outline"}>
+                <Button
+                  title="URLR"
+                  variant={"outline"}
+                  className="bg-custom-black/40"
+                >
                   Live demo
                 </Button>
               </Link>
 
               <Link href={"https://github.com/douglvv/urlr"} target="_blank">
-                <Button title="Repositório" variant={"outline"}>
+                <Button
+                  title="Repositório"
+                  variant={"outline"}
+                  className="bg-custom-black/40"
+                >
                   <Github />
                 </Button>
               </Link>
             </div>
           </div>
-
-          {/* Blobs */}
-          <div
-            className="absolute -z-50 top-[60%] -left-24 w-64 h-80 bg-purple-700/30
-          rounded-full mix-blend-screen filter blur-2xl animate-blob"
-            style={{ pointerEvents: "none" }}
-          />
-          <div
-            className="absolute -z-50 top-2/4 -left-40 w-64 h-80 bg-primary/30
-          rounded-full mix-blend-screen filter blur-2xl animate-blob 
-          animation-delay-2000"
-            style={{ pointerEvents: "none" }}
-          />
         </div>
+
+        {/* Blobs */}
+        <div
+          className="absolute -z-10 w-64 h-80 lg:w-72 lg:h-96 rounded-full
+          bg-purple-700/40 mix-blend-screen filter blur-3xl animate-blob
+            lg:-top-8 lg:left-24 top-0 -left-36"
+          style={{ pointerEvents: "none" }}
+        />
+        <div
+          className="absolute -z-10 w-64 h-80 lg:w-72 lg:h-96 rounded-full
+          bg-primary/40 mix-blend-screen filter blur-3xl animate-blob 
+          animation-delay-2000 lg:top-6 lg:left-32 top-16 -left-28"
+          style={{ pointerEvents: "none" }}
+        />
       </section>
 
       {/* Contato */}
