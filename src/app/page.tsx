@@ -7,7 +7,8 @@ import Link from "next/link";
 export default function Home() {
   return (
     <main className="overflow-x-hidden">
-      <header className="top-0 fixed z-50 w-full shadow bg-transparent backdrop-blur-lg">
+      {/* navbar nao está mais sticky */}
+      <header className="top-0 sticky z-50 w-full shadow bg-transparent backdrop-blur-lg">
         <nav className="flex flex-wrap items-center justify-between p-6 container text-lg">
           <div>
             <Link
@@ -86,7 +87,7 @@ export default function Home() {
 
       {/* Hero */}
       <section
-        className="w-full relative min-h-screen flex items-start md:items-center justify-center -mt-[88px] py-[88px]
+        className="w-full min-h-screen flex items-start md:items-center justify-center -mt-[88px] py-[88px]
         bg-gradient-to-bl from-primary/20 from-10% to-50% to-custom-black overflow-x-hidden z-10"
         id="home"
       >
@@ -157,7 +158,7 @@ export default function Home() {
                 Download CV
               </Button>
             </div>
-          </div>
+          </div>      
 
           {/* Blobs */}
           <div
@@ -172,7 +173,7 @@ export default function Home() {
             mix-blend-screen filter blur-3xl md:blur-3xl animate-blob
             animation-delay-2000"
             style={{ pointerEvents: "none" }}
-          />
+          />    
         </div>
       </section>
 
