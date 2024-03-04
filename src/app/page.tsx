@@ -210,12 +210,12 @@ export default function Home() {
         </div>
 
         {/* Blobs */}
-        <div
+        {/* <div
           className="absolute z-0 lg:w-72 lg:h-72 w-64 h-64 rounded-full
            mix-blend-screen filter blur-3xl animate-blob bg-purple-700/40
            lg:-top-32 lg:right-36 -top-24 -right-20"
           style={{ pointerEvents: "none" }}
-        />
+        /> */}
         <div
           className="absolute z-0 lg:w-72 lg:h-72 w-64 h-64 rounded-full
           mix-blend-screen filter blur-3xl animate-blob bg-primary/40 
@@ -231,8 +231,7 @@ export default function Home() {
         id="projetos"
       >
         <div
-          className="container flex items-center justify-center flex-col gap-2
-          "
+          className="container flex items-center justify-center flex-col gap-2 mb-16"
         >
           <h3
             className="text-2xl md:text-5xl font-extrabold tracking-widest 
@@ -364,12 +363,12 @@ export default function Home() {
         </div>
 
         {/* Blobs */}
-        <div
+        {/* <div
           className="absolute -z-10 w-64 h-80 lg:w-72 lg:h-96 rounded-full
           bg-purple-700/40 mix-blend-screen filter blur-3xl animate-blob
             lg:-top-8 lg:left-24 top-0 -left-36"
           style={{ pointerEvents: "none" }}
-        />
+        /> */}
         <div
           className="absolute -z-10 w-64 h-80 lg:w-72 lg:h-96 rounded-full
           bg-primary/40 mix-blend-screen filter blur-3xl animate-blob 
@@ -451,16 +450,16 @@ export default function Home() {
         </div>
 
         {/* Blobs */}
-        <div
-          className="absolute z-0 lg:w-72 lg:h-72 w-64 h-64 rounded-full
+        {/* <div
+          className="absolute -z-10 lg:w-72 lg:h-72 w-64 h-64 rounded-full
            mix-blend-screen filter blur-3xl animate-blob bg-purple-700/40
-           lg:-top-32 lg:right-36 -top-24 -right-20"
+           lg:-top-24 lg:right-36 -top-16 -right-20"
           style={{ pointerEvents: "none" }}
-        />
+        /> */}
         <div
-          className="absolute z-0 lg:w-72 lg:h-72 w-64 h-64 rounded-full
+          className="absolute -z-10 lg:w-72 lg:h-72 w-64 h-64 rounded-full
           mix-blend-screen filter blur-3xl animate-blob bg-primary/40 
-          animation-delay-2000 lg:-top-16 lg:right-16 -top-6 -right-32"
+          animation-delay-2000 lg:-top-10 lg:right-16 -top-0 -right-32"
           style={{ pointerEvents: "none" }}
         />
       </section>

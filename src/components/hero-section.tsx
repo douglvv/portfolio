@@ -84,12 +84,12 @@ function HeroSection() {
         </div>
 
         {/* Blobs */}
-        <div
+        {/* <div
           className="absolute z-0 w-52 h-52 lg:w-72 lg:h-72 rounded-full
             top-1/3 -left-14 lg:-top-28 lg:-left-44 bg-purple-700/40
             mix-blend-screen filter blur-3xl md:blur-3xl animate-blob"
           style={{ pointerEvents: "none" }}
-        />
+        /> */}
         <div
           className="absolute z-0 w-52 h-52 lg:w-72 lg:h-72 rounded-full
             top-[60%] -left-20 lg:-top-8 lg:-left-56  bg-primary/40
