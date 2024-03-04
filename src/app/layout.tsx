@@ -16,9 +16,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <Navbar />
-      <body className={`${poppins.className} overflow-x-hidden scroll-smooth`}>{children}</body>
+    <html lang="pt-br">
+      <body className={`${poppins.className} overflow-x-hidden scroll-smooth`}>
+        <Navbar />
+        {children}
+      </body>
     </html>
   );
 }
