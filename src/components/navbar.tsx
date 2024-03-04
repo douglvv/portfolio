@@ -14,18 +14,21 @@ function Navbar() {
       setIsOpen(!isOpen);
       window.scrollTo({ top: 0, behavior: "instant" });
     }
-    if(isOpen) setIsOpen(!isOpen);
+    if (isOpen) setIsOpen(!isOpen);
   };
 
   return (
     <>
-      <header className="top-0 fixed z-50 w-full shadow bg-transparent backdrop-blur-lg">
+      <header
+        className="top-0 fixed z-50 w-full shadow bg-transparent 
+        backdrop-blur-lg text-custom-white"
+      >
         <nav className="flex flex-wrap items-center justify-between p-6 container text-lg">
           <div>
             <Link
               href="/"
-              className="font-semibold tracking-wider hover:tracking-widest 
-              transition duration-300 hover:text-secondary"
+              className="font-semibold tracking-wider transition duration-300
+              hover:text-secondary"
             >
               <h1>@douglvv</h1>
             </Link>

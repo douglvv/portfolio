@@ -8,8 +8,6 @@ import Link from "next/link";
 export default function Home() {
   return (
     <main className="overflow-x-hidden">
-      <Navbar />
-
       {/* Hero */}
       <section
         className="w-full min-h-screen flex items-start md:items-center justify-center -mt-[88px] py-[88px]
