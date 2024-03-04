@@ -26,7 +26,7 @@ function Navbar() {
         <nav className="flex flex-wrap items-center justify-between p-6 container text-lg">
           <div>
             <Link
-              href="/"
+              href="#inicio"
               className="font-semibold tracking-wider transition duration-300
               hover:text-secondary"
             >
@@ -42,7 +42,7 @@ function Navbar() {
                   className="text-custom-white text-lg"
                 >
                   <Link
-                    href="/"
+                    href="#inicio"
                     className="font-semibold tracking-wider hover:text-secondary 
                     transition duration-300"
                   >

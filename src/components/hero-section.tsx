@@ -6,9 +6,9 @@ function HeroSection() {
   return (
     <section
       className="w-full min-h-screen flex items-start md:items-center z-10 
-      -mt-[88px] py-[88px] bg-gradient-to-bl from-primary/20 from-10% to-50%
+      bg-gradient-to-bl from-primary/20 from-10% to-50%
       to-custom-black overflow-x-hidden justify-center"
-      id="home"
+      id="inicio"
     >
       <div className="flex items-center justify-center container p-4 md:mt-8 mt-24 relative">
         <div className="flex items-center justify-center sm:gap-4">
@@ -85,27 +85,29 @@ function HeroSection() {
 
         {/* Blobs */}
         <div
-          className="absolute z-0 w-64 h-64 lg:w-72 lg:h-72 rounded-full
+          className="absolute z-0 w-52 h-52 lg:w-72 lg:h-72 rounded-full
             top-1/3 -left-14 lg:-top-28 lg:-left-44 bg-purple-700/40
             mix-blend-screen filter blur-3xl md:blur-3xl animate-blob"
           style={{ pointerEvents: "none" }}
         />
         <div
-          className="absolute z-0 w-64 h-64 lg:w-72 lg:h-72 rounded-full
+          className="absolute z-0 w-52 h-52 lg:w-72 lg:h-72 rounded-full
             top-[60%] -left-20 lg:-top-8 lg:-left-56  bg-primary/40
             mix-blend-screen filter blur-3xl md:blur-3xl animate-blob
             animation-delay-2000"
           style={{ pointerEvents: "none" }}
         />
       </div>
-
-      <div className="absolute bottom-16 my-8 animate-bounce">
-        <Link href={"#sobre"}>
-          <Button className="rounded-full" variant={"outline"} size={"icon"}>
-            <ChevronDown className="w-8 h-8 pt-1" />
-          </Button>
-        </Link>
-      </div>
+{/* 
+      <Link href={"#sobre"} className="bottom-16 my-4 absolute">
+        <Button
+          className="animate-bounce duration-1000 rounded-full"
+          variant={"outline"}
+          size={"icon"}
+        >
+          <ChevronDown className="w-8 h-8 pt-1" />
+        </Button>
+      </Link> */}
     </section>
   );
 }

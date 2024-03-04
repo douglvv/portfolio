@@ -13,12 +13,12 @@ export default function Home() {
 
       {/* Sobre */}
       <section
-        className="relative z-10 w-full min-h-fit mt-[88px] pb-[88px]"
+        className="relative z-10 min-h-screen w-full py-[88px] p-4"
+        id="sobre"
         // from-custom-black from-30%% to-primary/20 bg-gradient-to-b"
       >
         <div
-          className="flex flex-col items-center justify-center container gap-2 mb-16"
-          id="sobre"
+          className="flex flex-col items-center justify-center container gap-2 mb-16"          
         >
           <h1
             className="text-2xl md:text-5xl font-extrabold tracking-widest font-sans
@@ -232,7 +232,7 @@ export default function Home() {
       >
         <div
           className="container flex items-center justify-center flex-col gap-2
-          mb-16"
+          "
         >
           <h3
             className="text-2xl md:text-5xl font-extrabold tracking-widest 
@@ -380,7 +380,7 @@ export default function Home() {
 
       {/* Contato */}
       <section
-        className="h-screen w-full py-[88px]"
+        className="relative z-10 h-screen w-full py-[88px]"
         //  bg-gradient-to-b from-custom-black
         // from-40% to-80% to-primary/20"
         id="contato"
@@ -449,6 +449,20 @@ export default function Home() {
             </Button>
           </form>
         </div>
+
+        {/* Blobs */}
+        <div
+          className="absolute z-0 lg:w-72 lg:h-72 w-64 h-64 rounded-full
+           mix-blend-screen filter blur-3xl animate-blob bg-purple-700/40
+           lg:-top-32 lg:right-36 -top-24 -right-20"
+          style={{ pointerEvents: "none" }}
+        />
+        <div
+          className="absolute z-0 lg:w-72 lg:h-72 w-64 h-64 rounded-full
+          mix-blend-screen filter blur-3xl animate-blob bg-primary/40 
+          animation-delay-2000 lg:-top-16 lg:right-16 -top-6 -right-32"
+          style={{ pointerEvents: "none" }}
+        />
       </section>
     </main>
   );

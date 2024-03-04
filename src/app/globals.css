@@ -82,3 +82,11 @@
     @apply bg-background text-foreground;
   }
 }
+
+
+/* Works on Firefox */
+* {
+  scrollbar-width: auto;
+  scrollbar-color: #5c6cff transparent;
+  scroll-behavior: smooth;
+}
