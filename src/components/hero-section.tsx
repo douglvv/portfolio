@@ -98,16 +98,17 @@ function HeroSection() {
           style={{ pointerEvents: "none" }}
         />
       </div>
-{/* 
-      <Link href={"#sobre"} className="bottom-16 my-4 absolute">
-        <Button
-          className="animate-bounce duration-1000 rounded-full"
-          variant={"outline"}
-          size={"icon"}
-        >
-          <ChevronDown className="w-8 h-8 pt-1" />
-        </Button>
-      </Link> */}
+
+
+        <Link href={"#sobre"} className="bottom-4 absolute text-center">
+          <Button
+            className="animate-bounce duration-1000 rounded-full"
+            variant={"outline"}
+            size={"icon"}
+          >
+            <ChevronDown className="w-8 h-8 pt-1" />
+          </Button>
+        </Link>
     </section>
   );
 }
