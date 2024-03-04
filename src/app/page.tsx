@@ -1,4 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
+import Navbar from "@/components/navbar";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Github, Linkedin, Mail } from "lucide-react";
@@ -7,83 +8,7 @@ import Link from "next/link";
 export default function Home() {
   return (
     <main className="overflow-x-hidden">
-      {/* navbar nao está mais sticky */}
-      <header className="top-0 sticky z-50 w-full shadow bg-transparent backdrop-blur-lg">
-        <nav className="flex flex-wrap items-center justify-between p-6 container text-lg">
-          <div>
-            <Link
-              href="/"
-              className="font-semibold tracking-wider hover:tracking-widest 
-              transition duration-300 hover:text-secondary"
-            >
-              <h1>@douglvv</h1>
-            </Link>
-          </div>
-          <div>
-            <ul className="list-none flex flex-row gap-2">
-              <li className="list-item">
-                <Button
-                  variant={"link"}
-                  asChild
-                  className="text-custom-white text-lg"
-                >
-                  <Link
-                    href="/"
-                    className="font-semibold tracking-wider hover:text-secondary 
-                    transition duration-300"
-                  >
-                    Início
-                  </Link>
-                </Button>
-              </li>
-              <li className="list-item">
-                <Button
-                  variant={"link"}
-                  asChild
-                  className="text-custom-white text-lg"
-                >
-                  <Link
-                    href="#sobre"
-                    className="font-semibold tracking-wider hover:text-secondary 
-                    transition duration-300"
-                  >
-                    Sobre
-                  </Link>
-                </Button>
-              </li>
-              <li className="list-item">
-                <Button
-                  variant={"link"}
-                  asChild
-                  className="text-custom-white text-lg"
-                >
-                  <Link
-                    href="#projetos"
-                    className="font-semibold tracking-wider hover:text-secondary 
-                    transition duration-300"
-                  >
-                    Projetos
-                  </Link>
-                </Button>
-              </li>
-              <li className="list-item">
-                <Button
-                  variant={"link"}
-                  asChild
-                  className="text-custom-white text-lg"
-                >
-                  <Link
-                    href="#contato"
-                    className="font-semibold tracking-wider hover:text-secondary"
-                  >
-                    Contato
-                  </Link>
-                </Button>
-              </li>
-            </ul>
-          </div>
-        </nav>
-      </header>
+      <Navbar />
 
       {/* Hero */}
       <section
@@ -91,7 +16,7 @@ export default function Home() {
         bg-gradient-to-bl from-primary/20 from-10% to-50% to-custom-black overflow-x-hidden z-10"
         id="home"
       >
-        <div className="flex items-center justify-center container p-4 mt-8 sm:mt-4 relative">
+        <div className="flex items-center justify-center container p-4 md:mt-8 mt-24 relative">
           <div className="flex items-center justify-center sm:gap-4">
             <div className="flex flex-col items-center text-center">
               <div className="mb-8">
@@ -100,7 +25,7 @@ export default function Home() {
                   font-sans text-custom-white shadow -tracking-wider mb-4"
                   style={{ lineHeight: "1.2" }}
                 >
-                  Salve, eu sou
+                  Portfolio
                   <p className="text-white/0 bg-clip-text bg-gradient-to-r from-primary via-indigo-400 to-primary shadow">
                     Douglas Vidal
                   </p>
