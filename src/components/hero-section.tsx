@@ -1,4 +1,4 @@
-import { Github, Linkedin, Mail } from "lucide-react";
+import { ChevronDown, Github, Linkedin, Mail } from "lucide-react";
 import Link from "next/link";
 import { Button } from "./ui/button";
 
@@ -16,7 +16,7 @@ function HeroSection() {
             <div className="mb-8">
               <h1
                 className="text-4xl md:text-6xl lg:text-8xl font-extrabold 
-                font-sans text-custom-white shadow -tracking-wider"                
+                font-sans text-custom-white shadow -tracking-wider"
               >
                 Portfolio
               </h1>
@@ -97,6 +97,14 @@ function HeroSection() {
             animation-delay-2000"
           style={{ pointerEvents: "none" }}
         />
+      </div>
+
+      <div className="absolute bottom-16 my-8 animate-bounce">
+        <Link href={"#sobre"}>
+          <Button className="rounded-full" variant={"outline"} size={"icon"}>
+            <ChevronDown className="w-8 h-8 pt-1" />
+          </Button>
+        </Link>
       </div>
     </section>
   );
