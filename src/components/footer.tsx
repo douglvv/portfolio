@@ -4,7 +4,7 @@ import { Separator } from "@/components/ui/separator";
 
 function Footer() {
   return (
-    <footer className="w-full my-8 min-h-fit text-secondary/70">
+    <footer className="w-full my-8 min-h-fit text-secondary">
       <div className="flex flex-wrap md:items-center items-start justify-between container text-base">
         <div>
           <Link
@@ -19,7 +19,7 @@ function Footer() {
         <div>
           <ul className="list-none flex flex-col md:flex-row flex-wrap gap-2">
             <li className="list-item">
-              <Button variant={"link"} asChild className="text-secondary/70">
+              <Button variant={"link"} asChild className="text-secondary">
                 <Link
                   href="#inicio"
                   className="font-semibold tracking-wider 
@@ -30,7 +30,7 @@ function Footer() {
               </Button>
             </li>
             <li className="list-item">
-              <Button variant={"link"} asChild className="text-secondary/70">
+              <Button variant={"link"} asChild className="text-secondary">
                 <Link
                   href="#sobre"
                   className="font-semibold tracking-wider 
@@ -41,7 +41,7 @@ function Footer() {
               </Button>
             </li>
             <li className="list-item">
-              <Button variant={"link"} asChild className="text-secondary/70">
+              <Button variant={"link"} asChild className="text-secondary">
                 <Link
                   href="#projetos"
                   className="font-semibold tracking-wider 
@@ -52,7 +52,7 @@ function Footer() {
               </Button>
             </li>
             <li className="list-item">
-              <Button variant={"link"} asChild className="text-secondary/70">
+              <Button variant={"link"} asChild className="text-secondary">
                 <Link
                   href="#contato"
                   className="font-semibold tracking-wider"
@@ -66,7 +66,7 @@ function Footer() {
       </div>
 
       <div className="container">
-        <Separator className="my-8 bg-secondary/70" />
+        <Separator className="my-8 bg-secondary rounded" />
       </div>
 
       <div className="flex items-start justify-start container text-secondary/50">
