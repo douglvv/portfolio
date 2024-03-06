@@ -100,7 +100,7 @@ function HeroSection() {
       </div>
 
 
-        <Link href={"#sobre"} className="bottom-4 absolute text-center">
+        {/* <Link href={"#sobre"} className="bottom-4 absolute text-center">
           <Button
             className="animate-bounce duration-1000 rounded-full"
             variant={"outline"}
@@ -108,7 +108,7 @@ function HeroSection() {
           >
             <ChevronDown className="w-8 h-8 pt-1" />
           </Button>
-        </Link>
+        </Link> */}
     </section>
   );
 }
