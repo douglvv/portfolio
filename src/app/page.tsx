@@ -1,6 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
 import HeroSection from "@/components/hero-section";
-import Navbar from "@/components/navbar";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Github, Linkedin, Mail } from "lucide-react";
@@ -243,7 +242,7 @@ export default function Home() {
           <span className="w-6 h-1 bg-primary rounded"></span>
         </div>
         <div
-          className="grid grid-cols-1 md:grid-cols-2 items-center justify-center
+          className="grid grid-cols-1 md:grid-cols-2 items-start justify-center
           gap-16 container"
         >
           {/* Card */}
@@ -380,8 +379,6 @@ export default function Home() {
       {/* Contato */}
       <section
         className="relative z-10 h-screen w-full py-[88px]"
-        //  bg-gradient-to-b from-custom-black
-        // from-40% to-80% to-primary/20"
         id="contato"
       >
         <div

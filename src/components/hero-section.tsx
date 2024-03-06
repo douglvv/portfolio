@@ -1,6 +1,7 @@
 import { ChevronDown, Github, Linkedin, Mail } from "lucide-react";
 import Link from "next/link";
 import { Button } from "./ui/button";
+import DownloadCVButton from "./download-cv-button";
 
 function HeroSection() {
   return (
@@ -73,13 +74,7 @@ function HeroSection() {
               </a>
             </div>
 
-            <Button
-              className="uppercase text-custom-white font-bold"
-              size={"xl"}
-              variant={"outline"}
-            >
-              Download CV
-            </Button>
+            <DownloadCVButton />
           </div>
         </div>
 
