@@ -30,7 +30,7 @@ function ContactSection() {
       >
         <div className="flex items-start justify-start mt-4">
           <div className="max-w-[450px]">
-            <h1 className="text-lg md:text-2xl font-semibold mb-3">
+            <h1 className="text-lg md:text-2xl font-semibold mb-2">
               Por favor preencha o formulário.
             </h1>
             <h3 className="text-base md:text-lg text-secondary mb-8">
@@ -41,60 +41,13 @@ function ContactSection() {
               href={"mailto:vidaldl01@gmail.com"}
             >
               <Mail className="text-secondary" />
-              <h3 className="text-base md:text-lg text-secondary font-semibold">
+              <h3 className="text-base md:text-lg text-secondary">
                 vidaldl01@gmail.com
               </h3>
             </Link>
           </div>
         </div>
         <div className="max-w-[650px]">
-          {/* <form className="mt-4 text-sm lg:text-base">
-            <div className="mb-4">
-              <input
-                type="text"
-                id="name"
-                name="name"
-                className="text-custom-white mt-1 px-4 py-2 w-full border 
-                rounded-md focus:outline-none focus:ring focus:border-primary
-                tracking-wider bg-primary/20"
-                placeholder="Nome"
-                required
-              />
-            </div>
-            <div className="mb-4">
-              <input
-                type="email"
-                id="email"
-                name="email"
-                className="text-custom-white mt-1 px-4 py-2 w-full border 
-                rounded-md focus:outline-none focus:ring focus:border-primary
-                tracking-wider bg-primary/20"
-                placeholder="Endereço de email"
-                required
-              />
-            </div>
-            <div className="mb-8">
-              <textarea
-                id="message"
-                name="message"
-                rows={4}
-                className="text-custom-white mt-1 px-4 py-2 w-full border 
-                rounded-md focus:outline-none focus:ring focus:border-primary
-                tracking-wider bg-primary/20"
-                placeholder="Deixe sua mensagem"
-                required
-              />
-            </div>
-            <Button
-              className="w-full tracking-wide font-medium text-base lg:text-lg py-6 uppercase"
-              variant={"default"}
-              size={"lg"}
-              type="submit"
-            >
-              Enviar
-            </Button>
-          </form> */}
-
           <ContactForm />
         </div>
       </div>

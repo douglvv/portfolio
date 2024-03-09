@@ -148,7 +148,7 @@ function ProjectsSection() {
       <div
         className="absolute -z-10 w-64 h-80 lg:w-72 lg:h-96 rounded-full
           bg-primary/40 mix-blend-screen filter blur-3xl animate-blob 
-          animation-delay-2000 lg:top-6 lg:left-32 top-16 -left-28"
+          lg:top-6 lg:left-32 top-16 -left-28"
         style={{ pointerEvents: "none" }}
       />
     </section>

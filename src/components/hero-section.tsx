@@ -88,8 +88,7 @@ function HeroSection() {
         <div
           className="absolute z-0 w-52 h-52 lg:w-72 lg:h-72 rounded-full
             top-[60%] -left-20 lg:-top-8 lg:-left-56  bg-primary/40
-            mix-blend-screen filter blur-3xl md:blur-3xl animate-blob
-            animation-delay-2000"
+            mix-blend-screen filter blur-3xl md:blur-3xl animate-blob"
           style={{ pointerEvents: "none" }}
         />
       </div>

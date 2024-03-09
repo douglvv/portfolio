@@ -69,10 +69,10 @@ const config = {
             transform: "translate(0px, 0px) scale(1)",
           },
           "33%": {
-            transform: "translate(15px, 10px) scale(1.1)",
+            transform: "translate(15px, 10px) scale(1.15)",
           },
           "66%": {
-            transform: "translate(-5px, -15px) scale(0.9)",
+            transform: "translate(-5px, -15px) scale(0.85)",
           },
           "100%": {
             transform: "translate(0px, 0px) scale(1)",
@@ -90,7 +90,7 @@ const config = {
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
-        blob: "blob 5s infinite"
+        blob: "blob 7s infinite"
       },
     },
   },
