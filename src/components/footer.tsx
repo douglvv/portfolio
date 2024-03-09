@@ -5,6 +5,7 @@ import { Separator } from "@/components/ui/separator";
 function Footer() {
   return (
     <footer className="w-full my-8 min-h-fit text-secondary">
+      <Separator className="my-4 block bg-custom-white md:hidden" />
       <div className="flex flex-wrap md:items-center items-start justify-between container text-base">
         <div>
           <Link

@@ -1,7 +1,8 @@
 /* eslint-disable @next/next/no-img-element */
-import { Badge, Github } from "lucide-react";
+import { Github } from "lucide-react";
 import Link from "next/link";
 import { Button } from "./ui/button";
+import { Badge } from "./ui/badge";
 
 function ProjectsSection() {
   return (

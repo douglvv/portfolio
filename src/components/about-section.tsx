@@ -1,7 +1,7 @@
 function AboutSection() {
   return (
     <section
-      className="relative z-10 min-h-screen w-full py-[88px] p-4"
+      className="relative z-10 min-h-fit w-full py-[88px] p-4"
       id="sobre"
       // from-custom-black from-30%% to-primary/20 bg-gradient-to-b"
     >
