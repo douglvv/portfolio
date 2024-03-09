@@ -3,7 +3,7 @@ import { Button } from "./ui/button";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
-import { register } from "module";
+import axios from "axios";
 
 const formSchema = z.object({
   name: z
@@ -32,7 +32,13 @@ const ContactForm = () => {
   });
 
   const onSubmit = async (values: z.infer<typeof formSchema>) => {
-    alert("submited!");
+    try {
+      const res = await axios.post("/api/contact", values);
+
+      if(res.status === 200)alert(res.data.message)
+    } catch (error: any) {
+      console.log(error.message)
+    }
   };
 
   const {
