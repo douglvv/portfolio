@@ -1,8 +1,8 @@
 import { Mail } from "lucide-react";
 import { Button } from "./ui/button";
 import Link from "next/link";
+import ContactForm from "./contact-form";
 
-// https://medium.com/@rbgadotti/valida%C3%A7%C3%A3o-de-formul%C3%A1rio-com-zod-e-react-hook-form-garantindo-a-integridade-dos-dados-nos-seus-b1802aa329f1
 
 function ContactSection() {
   return (
@@ -48,7 +48,7 @@ function ContactSection() {
           </div>
         </div>
         <div className="max-w-[650px]">
-          <form className="mt-4 text-sm lg:text-base">
+          {/* <form className="mt-4 text-sm lg:text-base">
             <div className="mb-4">
               <input
                 type="text"
@@ -93,7 +93,9 @@ function ContactSection() {
             >
               Enviar
             </Button>
-          </form>
+          </form> */}
+
+          <ContactForm />
         </div>
       </div>
 
