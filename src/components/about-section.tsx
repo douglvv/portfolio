@@ -1,19 +1,43 @@
+"use client";
+import { motion } from "framer-motion";
+
 function AboutSection() {
   return (
     <section
-      className="relative z-10 min-h-fit w-full py-[88px] p-4"
+      className="relative z-10 min-h-screen w-full py-[88px] p-4"
       id="sobre"
       // from-custom-black from-30%% to-primary/20 bg-gradient-to-b"
     >
       <div className="flex flex-col items-center justify-center container gap-2 mb-16">
-        <h1
+        <motion.h1
+          initial={{ y: 50, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
+          transition={{
+            type: "spring",
+            stiffness: 33,
+            duration: 0.5,
+            bounce: 0.5
+          }}
+          viewport={{ once: true }}
           className="text-2xl md:text-5xl font-extrabold tracking-widest font-sans
             uppercase bg-clip-text bg-gradient-to-r from-secondary 
             to-primary-foreground text-transparent"
         >
           Sobre mim
-        </h1>
-        <span className="w-6 h-1 bg-primary rounded"></span>
+        </motion.h1>
+
+        <motion.span 
+        initial={{ y: 50, opacity: 0 }}
+        whileInView={{ y: 0, opacity: 1 }}
+        transition={{
+          type: "spring",
+          stiffness: 33,
+          duration: 0.5,
+          bounce: 0.5,
+          delay: 0.10,
+        }}
+        viewport={{ once: true }}
+        className="w-6 h-1 bg-primary rounded"></motion.span>
       </div>
 
       <div

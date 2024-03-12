@@ -1,8 +1,9 @@
+"use client"
 import { Mail } from "lucide-react";
 import { Button } from "./ui/button";
 import Link from "next/link";
 import ContactForm from "./contact-form";
-
+import { motion } from "framer-motion";
 
 function ContactSection() {
   return (
@@ -14,14 +15,35 @@ function ContactSection() {
         className="container flex items-center justify-center flex-col gap-2
           mb-16"
       >
-        <h3
+        <motion.h3
+          initial={{ y: 50, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
+          transition={{
+            type: "spring",
+            stiffness: 33,
+            duration: 0.5,
+            bounce: 0.5,
+          }}
+          viewport={{ once: true }}
           className="text-2xl md:text-5xl font-extrabold tracking-widest 
               font-sans uppercase bg-clip-text bg-gradient-to-r from-secondary 
               to-primary-foreground text-transparent"
         >
           Contato
-        </h3>
-        <span className="w-6 h-1 bg-primary rounded"></span>
+        </motion.h3>
+        <motion.span
+          initial={{ y: 50, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
+          transition={{
+            type: "spring",
+            stiffness: 33,
+            duration: 0.5,
+            bounce: 0.5,
+            delay: 0.1,
+          }}
+          viewport={{ once: true }}
+          className="w-6 h-1 bg-primary rounded"
+        ></motion.span>
       </div>
 
       <div

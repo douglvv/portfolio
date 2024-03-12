@@ -20,13 +20,13 @@ function Navbar() {
   return (
     <>
       <header
-        className="top-0 fixed z-50 w-full shadow bg-transparent 
+        className="top-0 fixed z-50 w-full bg-transparent 
         backdrop-blur-lg text-custom-white"
       >
         <nav className="flex flex-wrap items-center justify-between p-6 container text-lg">
           <div>
             <Link
-              href="#inicio"
+              href="/"
               className="font-semibold tracking-wider transition duration-300
               hover:text-secondary"
             >
