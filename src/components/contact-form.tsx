@@ -4,6 +4,8 @@ import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import axios from "axios";
+import { toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const formSchema = z.object({
   name: z
@@ -33,11 +35,13 @@ const ContactForm = () => {
 
   const onSubmit = async (values: z.infer<typeof formSchema>) => {
     try {
-      const res = await axios.post("/api/contact", values);
-
-      if(res.status === 200)alert(res.data.message)
+      const res = await toast.promise(axios.post("/api/contact", values), {
+        pending: "Enviando informações...",
+        success: "Informações enviadas com sucesso!",
+        error: "Erro ao enviar informações.",
+      });
     } catch (error: any) {
-      console.log(error.message)
+      console.log(error.message);
     }
   };
 
