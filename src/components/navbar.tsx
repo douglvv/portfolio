@@ -3,6 +3,7 @@ import Link from "next/link";
 import { Button } from "./ui/button";
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
+import { AnimatePresence, motion } from "framer-motion";
 
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -13,8 +14,24 @@ function Navbar() {
     if (!isOpen && isBrowser()) {
       setIsOpen(!isOpen);
       window.scrollTo({ top: 0, behavior: "instant" });
+      return;
     }
-    if (isOpen) setIsOpen(!isOpen);
+    if (isOpen) {
+      setIsOpen(!isOpen);
+      return;
+    }
+    return
+  };
+
+  const buttonVariants = {
+    open: {
+      rotate: 0,
+      transition: { duration: 0.75 },
+    },
+    closed: {
+      rotate: 180,
+      transition: { duration: 0.75 },
+    },
   };
 
   return (
@@ -97,92 +114,105 @@ function Navbar() {
             </ul>
           </div>
           <div className="md:hidden">
-            {isOpen ? (
-              <button onClick={handleClick}>
+            <motion.button
+              onClick={handleClick}
+              variants={buttonVariants}
+              animate={isOpen ? "open" : "closed"}
+              initial="closed"
+            >
+              {isOpen ? (
                 <X className="text-custom-white hover:text-secondary" />
-              </button>
-            ) : (
-              <button onClick={handleClick}>
+              ) : (
                 <Menu className="text-custom-white hover:text-secondary" />
-              </button>
-            )}
+              )}
+            </motion.button>
           </div>
         </nav>
       </header>
 
-      {isOpen && (
-        <div
-          className="md:hidden absolute h-screen w-full z-40 mb-4 py-2 px-4
-          flex-col justify-center flex items-center transition duration-300
-          text-center direction-normal bg-custom-black"
-        >
-          <ul className="list-none flex flex-col gap-12">
-            <li className="list-item">
-              <Button
-                variant={"link"}
-                asChild
-                className="text-custom-white text-2xl"
-                onClick={handleClick}
-              >
-                <Link
-                  href="/"
-                  className="font-semibold tracking-wider hover:text-secondary 
+      {isOpen ? (
+        <AnimatePresence mode="wait">
+          <motion.div
+            key={Math.random()}
+            initial={{ x: "-100%" }}
+            animate={{ x: 0, opacity: 1 }}
+            exit={{ x: "-100%" }}
+            transition={{
+              type: "spring",
+              duration: 0.2,
+              stiffness: 33,
+            }}
+            className="md:hidden absolute h-screen w-full z-40 mb-4 py-2 px-4
+            flex-col justify-center flex items-center text-center bg-custom-black"
+          >
+            <ul className="list-none flex flex-col gap-12">
+              <li className="list-item">
+                <Button
+                  variant={"link"}
+                  asChild
+                  className="text-custom-white text-2xl"
+                  onClick={handleClick}
+                >
+                  <Link
+                    href="/"
+                    className="font-semibold tracking-wider hover:text-secondary 
                     transition duration-300"
+                  >
+                    Início
+                  </Link>
+                </Button>
+              </li>
+              <li className="list-item">
+                <Button
+                  variant={"link"}
+                  asChild
+                  className="text-custom-white text-2xl"
+                  onClick={handleClick}
                 >
-                  Início
-                </Link>
-              </Button>
-            </li>
-            <li className="list-item">
-              <Button
-                variant={"link"}
-                asChild
-                className="text-custom-white text-2xl"
-                onClick={handleClick}
-              >
-                <Link
-                  href="#sobre"
-                  className="font-semibold tracking-wider hover:text-secondary 
+                  <Link
+                    href="#sobre"
+                    className="font-semibold tracking-wider hover:text-secondary 
                     transition duration-300"
+                  >
+                    Sobre
+                  </Link>
+                </Button>
+              </li>
+              <li className="list-item">
+                <Button
+                  variant={"link"}
+                  asChild
+                  className="text-custom-white text-2xl"
+                  onClick={handleClick}
                 >
-                  Sobre
-                </Link>
-              </Button>
-            </li>
-            <li className="list-item">
-              <Button
-                variant={"link"}
-                asChild
-                className="text-custom-white text-2xl"
-                onClick={handleClick}
-              >
-                <Link
-                  href="#projetos"
-                  className="font-semibold tracking-wider hover:text-secondary 
+                  <Link
+                    href="#projetos"
+                    className="font-semibold tracking-wider hover:text-secondary 
                     transition duration-300"
+                  >
+                    Projetos
+                  </Link>
+                </Button>
+              </li>
+              <li className="list-item">
+                <Button
+                  variant={"link"}
+                  asChild
+                  className="text-custom-white text-2xl"
+                  onClick={handleClick}
                 >
-                  Projetos
-                </Link>
-              </Button>
-            </li>
-            <li className="list-item">
-              <Button
-                variant={"link"}
-                asChild
-                className="text-custom-white text-2xl"
-                onClick={handleClick}
-              >
-                <Link
-                  href="#contato"
-                  className="font-semibold tracking-wider hover:text-secondary"
-                >
-                  Contato
-                </Link>
-              </Button>
-            </li>
-          </ul>
-        </div>
-      )}
+                  <Link
+                    href="#contato"
+                    className="font-semibold tracking-wider hover:text-secondary"
+                  >
+                    Contato
+                  </Link>
+                </Button>
+              </li>
+            </ul>
+          </motion.div>
+        </AnimatePresence>
+      ) : null}
     </>
   );
 }
