@@ -131,17 +131,7 @@ function Navbar() {
       </header>
 
       {isOpen ? (
-        <AnimatePresence mode="wait">
-          <motion.div
-            key={Math.random()}
-            initial={{ x: "-100%" }}
-            animate={{ x: 0, opacity: 1 }}
-            exit={{ x: "-100%" }}
-            transition={{
-              type: "spring",
-              duration: 0.2,
-              stiffness: 33,
-            }}
+          <div            
             className="md:hidden absolute h-screen w-full z-40 mb-4 py-2 px-4
             flex-col justify-center flex items-center text-center bg-custom-black"
           >
@@ -210,8 +200,7 @@ function Navbar() {
                 </Button>
               </li>
             </ul>
-          </motion.div>
-        </AnimatePresence>
+          </div>
       ) : null}
     </>
   );

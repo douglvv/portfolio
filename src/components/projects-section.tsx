@@ -197,21 +197,11 @@ function ProjectsSection() {
             <Badge>framer motion</Badge>
           </div>
           <div className="flex flex-row gap-3 flex-shrink p-1 mt-3">
-            <Link href={"https://douglvv.vercel.app"} target="_blank">
-              <Button
-                title="URLR"
-                variant={"outline"}
-                className="bg-custom-black/40"
-              >
-                Live demo
-              </Button>
-            </Link>
-
             <Link href={"https://github.com/douglvv/portfolio"} target="_blank">
               <Button
                 title="Repositório"
                 variant={"outline"}
-                className="bg-custom-black/40"
+                className="bg-custom-black/40 px-8"
               >
                 <Github />
               </Button>
