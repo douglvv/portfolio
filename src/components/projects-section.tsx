@@ -1,4 +1,4 @@
-"use client"
+"use client";
 /* eslint-disable @next/next/no-img-element */
 import { Github } from "lucide-react";
 import Link from "next/link";
@@ -149,6 +149,65 @@ function ProjectsSection() {
             </Link>
 
             <Link href={"https://github.com/douglvv/urlr"} target="_blank">
+              <Button
+                title="Repositório"
+                variant={"outline"}
+                className="bg-custom-black/40"
+              >
+                <Github />
+              </Button>
+            </Link>
+          </div>
+        </div>
+
+        <div
+          className="flex flex-col gap-2 rounded-lg p-4 shadow bg-gradient-to-br 
+            from-transparent via-primary/20 to-transparent backdrop-blur-3xl"
+        >
+          <div className="flex gap-2">
+            <span className="w-1 h-6 bg-primary rounded" />
+            <h1 className="text-lg md:text-xl font-semibold">Portfolio</h1>
+          </div>
+          <div>
+            <img
+              src="/portfolio.png"
+              alt="Preview do portfolio."
+              className="rounded-md max-w-full h-auto p-2 mb-2 shadow"
+            />
+            <p className="text-sm md:text-base text-secondary px-2">
+              Portfolio pessoal demonstrando alguns projetos meus.
+              <br />
+              Busquei seguir padrões de design para criar uma interface
+              intuitiva e responsiva.
+              <br />
+              Utilizei Framer Motion para criar animações simples para os
+              componentes e Nodemailer para implementar o envio automático dos
+              emails com as informações do formulário de contato em conjunto com
+              as bibliotecas zod e hook form para validação dos dados.
+            </p>
+          </div>
+          <div className="flex flex-row gap-1 flex-wrap p-1">
+            <Badge>typescript</Badge>
+            <Badge>nextjs</Badge>
+            <Badge>tailwind</Badge>
+            <Badge>shadcn</Badge>
+            <Badge>nodemailer</Badge>
+            <Badge>zod</Badge>
+            <Badge>hook form</Badge>
+            <Badge>framer motion</Badge>
+          </div>
+          <div className="flex flex-row gap-3 flex-shrink p-1 mt-3">
+            <Link href={"https://douglvv.vercel.app"} target="_blank">
+              <Button
+                title="URLR"
+                variant={"outline"}
+                className="bg-custom-black/40"
+              >
+                Live demo
+              </Button>
+            </Link>
+
+            <Link href={"https://github.com/douglvv/portfolio"} target="_blank">
               <Button
                 title="Repositório"
                 variant={"outline"}
