@@ -64,18 +64,25 @@ function ProjectsSection() {
               className="rounded-md max-w-full h-auto p-2 mb-2 shadow"
             />
             <p className="text-sm md:text-base text-secondary px-2">
-              Uma aplicação web projetada para fornecer aos usuários informações
-              sobre filmes e séries do banco de dados do IMDb.
+              Aplicação web que permite o usuário pesquisar e visualizar
+              informações detalhadas sobre títulos da base da dados do IMDB,
+              além de adicionar aos favoritos de sua conta.
               <br />
-              Permite que os usuários pesquisem e acessem informações detalhadas
-              sobre os títulos, além de salva-los nos favoritos de suas contas
-              para serem acessados posteriormente.
+              Utilizei a ferramenta <strong>Clerk</strong> para autenticação,
+              juntamente com <strong>Webhooks</strong> e{" "}
+              <strong>MongoDB Atlas</strong> para armazenamento dos títulos
+              favoritos de cada usuário.
+              <br />
+              Explorei o uso de <strong>server actions</strong> do Nextjs para
+              realizar as requisições de API externas no servidor, gerando as
+              páginas estaticamente visando melhor performance.
             </p>
           </div>
           <div className="flex flex-row gap-1 flex-wrap p-1">
             <Badge>typescript</Badge>
             <Badge>next.js</Badge>
             <Badge>clerk auth</Badge>
+            <Badge>webhooks</Badge>
             <Badge>mongodb</Badge>
             <Badge>tailwind</Badge>
             <Badge>shadcn</Badge>
@@ -119,11 +126,14 @@ function ProjectsSection() {
               className="rounded-md max-w-full h-auto p-2 mb-2 shadow"
             />
             <p className="text-sm md:text-base text-secondary px-2">
-              Interface de usuário inspirada no conceito do Link Tree.
+              Interface de usuário inspirada no conceito de Link Tree.
               <br />
-              A principal funcionalidade é permitir a organização e persistência
-              de links, oferecendo a capacidade de reordená-los por meio de drag
-              and drop.
+              Projeto criado com a intenção de explorar as funcionalidades das
+              bibliotecas <strong>Redux Persist</strong> e{" "}
+              <strong>React Beautiful DND</strong> em conjunto, visando permitir
+              a <strong>organização</strong> e <strong>persistencia</strong> dos
+              links, oferecendo a capacidade de reordená-los por meio de{" "}
+              <strong>drag n drop</strong>.
               <br />
               As alterações na ordem dos links são salvas utilizando Redux
               Persist para armazenamento local.
@@ -175,25 +185,28 @@ function ProjectsSection() {
               className="rounded-md max-w-full h-auto p-2 mb-2 shadow"
             />
             <p className="text-sm md:text-base text-secondary px-2">
-              Portfolio pessoal demonstrando alguns projetos meus.
+              Portfolio pessoal demonstrando alguns projetos e informações
+              minhas.
               <br />
               Busquei seguir padrões de design para criar uma interface
               intuitiva e responsiva.
               <br />
-              Utilizei Framer Motion para criar animações simples para os
-              componentes e Nodemailer para implementar o envio automático dos
-              emails com as informações do formulário de contato em conjunto com
-              as bibliotecas zod e hook form para validação dos dados.
+              Utilizei <strong>Framer Motion</strong> para criar animações
+              simples para os componentes e <strong>Nodemailer</strong> para
+              implementar o envio automático dos emails com as informações do
+              formulário de contato em conjunto com as bibliotecas{" "}
+              <strong>Zod</strong> e <strong>Hook Form</strong> para validação
+              dos dados.
             </p>
           </div>
           <div className="flex flex-row gap-1 flex-wrap p-1">
             <Badge>typescript</Badge>
             <Badge>nextjs</Badge>
-            <Badge>tailwind</Badge>
-            <Badge>shadcn</Badge>
             <Badge>nodemailer</Badge>
             <Badge>zod</Badge>
             <Badge>hook form</Badge>
+            <Badge>tailwind</Badge>
+            <Badge>shadcn</Badge>
             <Badge>framer motion</Badge>
           </div>
           <div className="flex flex-row gap-3 flex-shrink p-1 mt-3">
