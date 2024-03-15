@@ -84,6 +84,7 @@ function ProjectsSection() {
             <Badge>clerk auth</Badge>
             <Badge>webhooks</Badge>
             <Badge>mongodb</Badge>
+            <Badge>mongoose</Badge>
             <Badge>tailwind</Badge>
             <Badge>shadcn</Badge>
           </div>
@@ -170,6 +171,7 @@ function ProjectsSection() {
           </div>
         </div>
 
+        {/* Card 3 */}
         <div
           className="flex flex-col gap-2 rounded-lg p-4 shadow bg-gradient-to-br 
             from-transparent via-primary/20 to-transparent backdrop-blur-3xl"
@@ -211,6 +213,58 @@ function ProjectsSection() {
           </div>
           <div className="flex flex-row gap-3 flex-shrink p-1 mt-3">
             <Link href={"https://github.com/douglvv/portfolio"} target="_blank">
+              <Button
+                title="Repositório"
+                variant={"outline"}
+                className="bg-custom-black/40 px-8"
+              >
+                <Github />
+              </Button>
+            </Link>
+          </div>
+        </div>
+
+        {/* Card */}
+        <div
+          className="flex flex-col gap-2 rounded-lg p-4 shadow bg-gradient-to-br 
+            from-transparent via-primary/20 to-transparent backdrop-blur-3xl"
+        >
+          <div className="flex gap-2">
+            <span className="w-1 h-6 bg-primary rounded" />
+            <h1 className="text-lg md:text-xl font-semibold">
+              Projeto de Extensão
+            </h1>
+          </div>
+          <div>
+            <img
+              src="/projeto-extensao.png"
+              alt="Preview do projeto Cinepic"
+              className="rounded-md max-w-full h-auto p-2 mb-2 shadow"
+            />
+            <p className="text-sm md:text-base text-secondary px-2">
+              Projeto de Extensão desenvolvido no curso de ADS.
+              <br />
+              Feito utilizando padrão MVC com Node.js, Express, Handlebars e
+              MySQL + Sequelize.
+              <br />
+              A aplicação gerencia clientes, produtos e vendas, possui
+              autenticação e controle de sessão, dashboard de vendas, charts e
+              relatório.
+            </p>
+          </div>
+          <div className="flex flex-row gap-1 flex-wrap p-1">
+            <Badge>javascript</Badge>
+            <Badge>express</Badge>
+            <Badge>handlebars</Badge>
+            <Badge>mysql</Badge>
+            <Badge>chart js</Badge>
+            <Badge>bootstrap</Badge>
+          </div>
+          <div className="flex flex-row gap-3 flex-shrink p-1 mt-3">
+            <Link
+              href={"https://github.com/douglvv/appControleFabrica"}
+              target="_blank"
+            >
               <Button
                 title="Repositório"
                 variant={"outline"}

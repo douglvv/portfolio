@@ -16,7 +16,7 @@ function AboutSection() {
             type: "spring",
             stiffness: 33,
             duration: 0.5,
-            bounce: 0.5
+            bounce: 0.5,
           }}
           viewport={{ once: true }}
           className="text-2xl md:text-5xl font-extrabold tracking-widest font-sans
@@ -26,18 +26,19 @@ function AboutSection() {
           Sobre mim
         </motion.h1>
 
-        <motion.span 
-        initial={{ y: 50, opacity: 0 }}
-        whileInView={{ y: 0, opacity: 1 }}
-        transition={{
-          type: "spring",
-          stiffness: 33,
-          duration: 0.5,
-          bounce: 0.5,
-          delay: 0.10,
-        }}
-        viewport={{ once: true }}
-        className="w-6 h-1 bg-primary rounded"></motion.span>
+        <motion.span
+          initial={{ y: 50, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
+          transition={{
+            type: "spring",
+            stiffness: 33,
+            duration: 0.5,
+            bounce: 0.5,
+            delay: 0.1,
+          }}
+          viewport={{ once: true }}
+          className="w-6 h-1 bg-primary rounded"
+        ></motion.span>
       </div>
 
       <div
@@ -87,12 +88,6 @@ function AboutSection() {
               className="py-2 px-4 rounded-lg bg-white/20 text-primary-foreground
                 backdrop-blur-lg text-center hover:bg-white/40 cursor-default"
             >
-              Redux
-            </span>
-            <span
-              className="py-2 px-4 rounded-lg bg-white/20 text-primary-foreground
-                backdrop-blur-lg text-center hover:bg-white/40 cursor-default"
-            >
               Next.js
             </span>
             <span
@@ -100,6 +95,12 @@ function AboutSection() {
                 backdrop-blur-lg text-center hover:bg-white/40 cursor-default"
             >
               Vite
+            </span>
+            <span
+              className="py-2 px-4 rounded-lg bg-white/20 text-primary-foreground
+                backdrop-blur-lg text-center hover:bg-white/40 cursor-default"
+            >
+              Redux
             </span>
             <span
               className="py-2 px-4 rounded-lg bg-white/20 text-primary-foreground
